@@ -862,7 +862,7 @@
                           <td>direction</td>
                           <td>String</td>
                           <td class="class-table__available">
-                            <div>left</div>
+                            <div>left,</div>
                             <div>right</div>
                           </td>
                           <td class="class-table__default">right</td>
@@ -872,7 +872,7 @@
                           <td>offset</td>
                           <td>Number | String</td>
                           <td class="class-table__available">
-                            <div>integer number of columns</div>
+                            <div>integer number of columns,</div>
                             <div>auto</div>
                           </td>
                           <td class="class-table__default">auto</td>
@@ -898,6 +898,302 @@
                     </tbody>
                   </table>
                   <td class="class-table__description">Shift the columns in the row by a certain number of columns to the right or left.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="title col-12">Column layout</h3>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>order-0 - order-12,</div>
+                  <div>order-first,</div>
+                  <div>order-last,</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">order ($order,$ breakpoint)</div>
+                  <div class="class-table__mixin-description">Sorts the columns in a row according to the parameter <span class = 'inline-snippet'> $order </span> - an integer that determines the order of columns - the smaller the number, the closer the column will be to the beginning of the line. If when the mixin is called, it will be given the second argument <span class = 'inline-snippet'> $breakpoint </span>, and its value will correspond to one of the key names of the global object <span class = 'inline-snippet'> $grid -breakpoints </span>, then the sequencing rule will only work in the corresponding media request. Applies to row element <span class = 'inline-snippet'>row</span></div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>order</td>
+                          <td>Number | String</td>
+                          <td class="class-table__available">
+                            <div>0 is the total number of columns,</div>
+                            <div>first,</div>
+                            <div>last</div>
+                          </td>
+                          <td class="class-table__default">0</td>
+                          <td>An integer or line that defines the visual position of the column in the grid line. The smaller the number, the closer the column will be to the beginning of the line.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, the column call will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </ span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Set the order of the visual arrangement of the columns in the row. Applies to row element <span class = 'inline-snippet'>row</span></td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="title col-12">Reset margins</h3>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-gutters ( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeros the outer margins of the element. Applies to any grid element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>$breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero out all indentation of the element. Apply to both the line element and the grid element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-h-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-h-gutters ( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeroes out the horizontal horizontal indents of the element. Applies to both the row element and the column element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero out the horizontal horizontal padding of the element. Applies to both the row element and the column element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-v-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-v-gutters ( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeros the outer vertical indents of the element. Applies to both the row element and the column element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer vertical padding of the element. Applies to both the row element and the column element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zero out the indentation of the column elements in the row. Applies to the row element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer margins of the column elements in the row. Apply to the row element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-h-gutters( $breakpoint )</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-h-gutters</div>
+                  <div class="class-table__mixin-description">Zeroes the outer horizontal indentation of the column elements in the row. Applies to the row element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer horizontal indentation of the column elements in the row. Applies to the row element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-v-gutters( $breakpoint )</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-v-gutters</div>
+                  <div class="class-table__mixin-description">Zero out the outer vertical indentation of the column elements in the row. Applies to the row element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer horizontal indentation of the column elements in the row. Applies to the row element.</td>
                 </td>
               </tr>
             </tbody>

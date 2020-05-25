@@ -240,7 +240,7 @@
                 "name": "direction",
                 "type": "String",
                 "available": [
-                  "left",
+                  "left,",
                   "right"
                 ],
                 "default": "right",
@@ -250,7 +250,7 @@
                 "name": "offset",
                 "type": "Number|String",
                 "available": [
-                  "целое число колонок",
+                  "целое число колонок,",
                   "auto"
                 ],
                 "default": "auto",
@@ -270,7 +270,7 @@
                   "phone-sm"
                 ],
                 "default": "null",
-                "description": "Необязательный параметр. Если для него передано значение, сещение для колонки сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+                "description": "Необязательный параметр. Если для него передано значение, смещение для колонки сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
               }
             ]
           },
@@ -287,40 +287,209 @@
           ],
           "mixin": {
             "name": "order( $order, $breakpoint )",
-            "description": "Упорядочивает колонки в строке согласно параметру <span class='inline-snippet'>$order</span> - целому числу, определяющему порядок следования колонок - чем меньше число, тем ближе к началу строки будет расположена колонка. Если при вызове миксина ему будет передан второй аргумент <span class='inline-snippet'>$breakpoint</span>, и при этом его значение будет соответствовать одному из имён ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>, то правило упорядочивания будет срабатывать лишь в соответствующем медиазапросе.",
+            "description": "Упорядочивает колонки в строке согласно параметру <span class='inline-snippet'>$order</span> - целому числу, определяющему порядок следования колонок - чем меньше число, тем ближе к началу строки будет расположена колонка. Если при вызове миксина ему будет передан второй аргумент <span class='inline-snippet'>$breakpoint</span>, и при этом его значение будет соответствовать одному из имён ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>, то правило упорядочивания будет срабатывать лишь в соответствующем медиазапросе. Применяется к элементу строки <span class='inline-snippet'>row</span>",
             "options": [
               {
                 "name": "order",
                 "type": "Number|String",
                 "available": [
-                  "0 - общее число колонок",
-                  "first",
+                  "0 - общее число колонок,",
+                  "first,",
                   "last"
                 ],
                 "default": "0",
                 "description": "Целое число или строка, определяющие визуальное положение колонки в строке сетки. Чем меньше число, тем ближе к началу строки будет расположена колонка."
               },
               {
-                "name": "",
-                "type": "",
+                "name": "breakpoint",
+                "type": "String",
                 "available": [
-
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
                 ],
-                "default": "",
-                "description": ""
-              },
-              {
-                "name": "",
-                "type": "",
-                "available": [
-
-                ],
-                "default": "",
-                "description": ""
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сещение для колонки сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
               }
             ]
           },
-          "description": ""
+          "description": "Задают порядок визуального расположения колонок в строке. Применяются к элементу строки <span class='inline-snippet'>row</span>."
+        }
+      ],
+      "gutters": [
+        {
+          "title": "Сброс внешних отступов ( margins )",
+          "className": [
+            "no-gutters"
+          ],
+          "mixin": {
+            "name": "no-gutters( $breakpoint )",
+            "description": "Обнуляет внешние отступы элемента. Применяется к любому элементу сетки.",
+            "options": [
+              {
+                "name": "$breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Обнуляют все внешние отступы у элемента. Применяются как к элементу строки, так и к элементу сетки."
+        },
+        {
+          "className": [
+            "no-h-gutters"
+          ],
+          "mixin": {
+            "name": "no-h-gutters( $breakpoint )",
+            "description": "Обнуляет внешние горизонтальные отступы элемента. Применяется как к элементу строки, так и к элементу колонки.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Обнуляют внешние горизонтальные отступы элемента. Применяются как к элементу строки, так и к элементу колонки."
+        },
+        {
+          "className": [
+            "no-v-gutters"
+          ],
+          "mixin": {
+            "name": "no-v-gutters( $breakpoint )",
+            "description": "Обнуляет внешние вертикальные отступы элемента. Применяется как к элементу строки, так и к элементу колонки.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Обнуляют внешние вертикальные отступы элемента. Применяются как к элементу строки, так и к элементу колонки."
+        },
+        {
+          "className": [
+            "no-children-gutters"
+          ],
+          "mixin": {
+            "name": "no-children-gutters( $breakpoint )",
+            "description": "Обнуляет внешние отступы элементов колонок в строке. Применяется к элементу строки.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Обнуляют внешние отступы элементов колонок в строке. Применяются к элементу строки."
+        },
+        {
+          "className": [
+            "no-children-h-gutters"
+          ],
+          "mixin": {
+            "name": "no-children-h-gutters( $breakpoint )",
+            "description": "Обнуляет внешние горизонтальные отступы элементов колонок в строке. Применяется к элементу строки.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Обнуляют внешние горизонтальные отступы элементов колонок в строке. Применяется к элементу строки."
+        },
+        {
+          "className": [
+            "no-children-v-gutters"
+          ],
+          "mixin": {
+            "name": "no-children-v-gutters( $breakpoint )",
+            "description": "Обнуляет внешние вертикальные отступы элементов колонок в строке. Применяется к элементу строки.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Обнуляют внешние горизонтальные отступы элементов колонок в строке. Применяются к элементу строки."
         }
       ]
     }
@@ -566,7 +735,7 @@
                 "name": "direction",
                 "type": "String",
                 "available": [
-                  "left",
+                  "left,",
                   "right"
                 ],
                 "default": "right",
@@ -576,7 +745,7 @@
                 "name": "offset",
                 "type": "Number | String",
                 "available": [
-                  "integer number of columns",
+                  "integer number of columns,",
                   "auto"
                 ],
                 "default": "auto",
@@ -601,6 +770,221 @@
             ]
           },
           "description": "Shift the columns in the row by a certain number of columns to the right or left."
+        }
+      ],
+      "ordering": [
+        {
+          "title": "Column layout",
+          "className": [
+            "order-0 - order-12,",
+            "order-first,",
+            "order-last,"
+          ],
+          "mixin": {
+            "name": "order ($order,$ breakpoint)",
+            "description": "Sorts the columns in a row according to the parameter <span class = 'inline-snippet'> $order </span> - an integer that determines the order of columns - the smaller the number, the closer the column will be to the beginning of the line. If when the mixin is called, it will be given the second argument <span class = 'inline-snippet'> $breakpoint </span>, and its value will correspond to one of the key names of the global object <span class = 'inline-snippet'> $grid -breakpoints </span>, then the sequencing rule will only work in the corresponding media request. Applies to row element <span class = 'inline-snippet'>row</span>",
+            "options": [
+              {
+                "name": "order",
+                "type": "Number | String",
+                "available": [
+                  "0 is the total number of columns,",
+                  "first,",
+                  "last"
+                ],
+                "default": "0",
+                "description": "An integer or line that defines the visual position of the column in the grid line. The smaller the number, the closer the column will be to the beginning of the line."
+              },
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, the column call will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </ span>. "
+              }
+            ]
+          },
+          "description": "Set the order of the visual arrangement of the columns in the row. Applies to row element <span class = 'inline-snippet'>row</span>"
+        }
+      ],
+      "gutters": [
+        {
+          "title": "Reset margins",
+          "className": [
+            "no-gutters"
+          ],
+          "mixin": {
+            "name": "no-gutters ( $breakpoint )",
+            "description": "Zeros the outer margins of the element. Applies to any grid element.",
+            "options": [
+              {
+                "name": "$breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Zero out all indentation of the element. Apply to both the line element and the grid element."
+        },
+        {
+          "className": [
+            "no-h-gutters"
+          ],
+          "mixin": {
+            "name": "no-h-gutters ( $breakpoint )",
+            "description": "Zeroes out the horizontal horizontal indents of the element. Applies to both the row element and the column element.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Zero out the horizontal horizontal padding of the element. Applies to both the row element and the column element."
+        },
+        {
+          "className": [
+            "no-v-gutters"
+          ],
+          "mixin": {
+            "name": "no-v-gutters ( $breakpoint )",
+            "description": "Zeros the outer vertical indents of the element. Applies to both the row element and the column element.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Zero the outer vertical padding of the element. Applies to both the row element and the column element."
+        },
+        {
+          "className": [
+            "no-children-gutters"
+          ],
+          "mixin": {
+            "name": "no-children-gutters( $breakpoint )",
+            "description": "Zero out the indentation of the column elements in the row. Applies to the row element.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Zero the outer margins of the column elements in the row. Apply to the row element."
+        },
+        {
+          "className": [
+            "no-children-h-gutters( $breakpoint )"
+          ],
+          "mixin": {
+            "name": "no-children-h-gutters",
+            "description": "Zeroes the outer horizontal indentation of the column elements in the row. Applies to the row element.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Zero the outer horizontal indentation of the column elements in the row. Applies to the row element."
+        },
+        {
+          "className": [
+            "no-children-v-gutters( $breakpoint )"
+          ],
+          "mixin": {
+            "name": "no-children-v-gutters",
+            "description": "Zero out the outer vertical indentation of the column elements in the row. Applies to the row element.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Zero the outer horizontal indentation of the column elements in the row. Applies to the row element."
         }
       ]
     }

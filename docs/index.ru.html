@@ -863,7 +863,7 @@
                           <td>direction</td>
                           <td>String</td>
                           <td class="class-table__available">
-                            <div>left</div>
+                            <div>left,</div>
                             <div>right</div>
                           </td>
                           <td class="class-table__default">right</td>
@@ -873,11 +873,73 @@
                           <td>offset</td>
                           <td>Number|String</td>
                           <td class="class-table__available">
-                            <div>целое число колонок</div>
+                            <div>целое число колонок,</div>
                             <div>auto</div>
                           </td>
                           <td class="class-table__default">auto</td>
                           <td>Число колонок, на которое будет смещена колонка. Если передано значение <span class='inline-snippet'>auto</span>, колонка сместится вправо/влево ( зависит от второго параметра <span class='inline-snippet'>direction</span> ) на всё доступное свободное пространство.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, смещение для колонки сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Смещают колонки в строке на определённое число колонок вправо или влево.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="title col-12">Порядок расположения колонок</h3>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Классы</th>
+                <th>Соответствующий миксин</th>
+                <th>Описание</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>order-0 - order-12,</div>
+                  <div>order-first,</div>
+                  <div>order-last,</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">order( $order, $breakpoint )</div>
+                  <div class="class-table__mixin-description">Упорядочивает колонки в строке согласно параметру <span class='inline-snippet'>$order</span> - целому числу, определяющему порядок следования колонок - чем меньше число, тем ближе к началу строки будет расположена колонка. Если при вызове миксина ему будет передан второй аргумент <span class='inline-snippet'>$breakpoint</span>, и при этом его значение будет соответствовать одному из имён ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>, то правило упорядочивания будет срабатывать лишь в соответствующем медиазапросе. Применяется к элементу строки <span class='inline-snippet'>row</span></div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>order</td>
+                          <td>Number|String</td>
+                          <td class="class-table__available">
+                            <div>0 - общее число колонок,</div>
+                            <div>first,</div>
+                            <div>last</div>
+                          </td>
+                          <td class="class-table__default">0</td>
+                          <td>Целое число или строка, определяющие визуальное положение колонки в строке сетки. Чем меньше число, тем ближе к началу строки будет расположена колонка.</td>
                         </tr>
                         <tr>
                           <td>breakpoint</td>
@@ -898,7 +960,241 @@
                       </tr>
                     </tbody>
                   </table>
-                  <td class="class-table__description">Смещают колонки в строке на определённое число колонок вправо или влево.</td>
+                  <td class="class-table__description">Задают порядок визуального расположения колонок в строке. Применяются к элементу строки <span class='inline-snippet'>row</span>.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="title col-12">Сброс внешних отступов ( margins )</h3>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Классы</th>
+                <th>Соответствующий миксин</th>
+                <th>Описание</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Обнуляет внешние отступы элемента. Применяется к любому элементу сетки.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>$breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Обнуляют все внешние отступы у элемента. Применяются как к элементу строки, так и к элементу сетки.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-h-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-h-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Обнуляет внешние горизонтальные отступы элемента. Применяется как к элементу строки, так и к элементу колонки.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Обнуляют внешние горизонтальные отступы элемента. Применяются как к элементу строки, так и к элементу колонки.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-v-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-v-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Обнуляет внешние вертикальные отступы элемента. Применяется как к элементу строки, так и к элементу колонки.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Обнуляют внешние вертикальные отступы элемента. Применяются как к элементу строки, так и к элементу колонки.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Обнуляет внешние отступы элементов колонок в строке. Применяется к элементу строки.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Обнуляют внешние отступы элементов колонок в строке. Применяются к элементу строки.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-h-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-h-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Обнуляет внешние горизонтальные отступы элементов колонок в строке. Применяется к элементу строки.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Обнуляют внешние горизонтальные отступы элементов колонок в строке. Применяется к элементу строки.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-v-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-v-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Обнуляет внешние вертикальные отступы элементов колонок в строке. Применяется к элементу строки.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Параметр</th>
+                        <th>Тип</th>
+                        <th>Доступные значения</th>
+                        <th>Значение по умолчанию</th>
+                        <th>Описание</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Необязательный параметр. Если для него передано значение, сброс отступов для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Обнуляют внешние горизонтальные отступы элементов колонок в строке. Применяются к элементу строки.</td>
                 </td>
               </tr>
             </tbody>
