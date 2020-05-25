@@ -1,0 +1,26 @@
+.container
+  +container
+
+.row
+  +row
+
+.col
+  +col
+
+/*
+ *Генерация "колоночных" классов и правил для них исходя из глобальной переменной $columns - заданного количества
+ *столбцов сетки
+@for $i from 1 through $columns
+  .col-#{$i}
+    flex: 0 0 auto
+    box-sizing: border-box
+    margin: 0 ($h-gutter / 2) $v-gutter
+
+.no-gutters
+  +no-gutters
+
+// генерация "колоночных" классов
++generate-grid
+
+// генерация "колоночных" клоссов с медиазапросами
++generate-grid-breakpoints

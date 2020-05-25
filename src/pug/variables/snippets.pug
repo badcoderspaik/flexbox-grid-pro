@@ -1,0 +1,416 @@
+-
+  const snippets = {
+  html: [
+  `<div class="wrapper container">
+    <header class="page-header row">
+      <div class="logo col-2"></div>
+      <nav class="main-nav col"></nav>
+    </header>
+
+    <main class="page-main row">
+      <section class="left-sidebar col-3"></section>
+      <section class="page-content col-6"></section>
+      <section class="right-sidebar col-3"></section>
+    </main>
+
+    <footer class="page-footer row">
+      <div class="footer-menu col-4"></div>
+      <div class="license col-8"></div>
+    </footer>
+  </div>`,
+
+  `<div class="container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col">col-12</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1">col-1</div>
+      <div class="example__col col-11">col-11</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-10">col-10</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-3">col-3</div>
+      <div class="example__col col-9">col-9</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-8">col-8</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-5">col-5</div>
+      <div class="example__col col-7">col-7</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-6">col-6</div>
+      <div class="example__col col-6">col-6</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-7">col-7</div>
+      <div class="example__col col-5">col-5</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-8">col-8</div>
+      <div class="example__col col-4">col-4</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-9">col-9</div>
+      <div class="example__col col-3">col-3</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-10">col-10</div>
+      <div class="example__col col-2">col-2</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-11">col-11</div>
+      <div class="example__col col-1">col-1</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row justify-content-start">
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+    </div>
+
+    <div class="example row justify-content-center">
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+    </div>
+
+    <div class="example row justify-content-end">
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+    </div>
+
+    <div class="example row justify-content-space-between">
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+    </div>
+
+    <div class="examplerow justify-content-space-around">
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+      <div class="example__col col-2">col-2</div>
+    </div>
+  </div>`,
+
+  `<div class="col-12">
+    <div class="example row align-items-start">
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+    </div>
+
+    <div class="example row align-items-center">
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+    </div>
+
+    <div class="example row align-items-end">
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+    </div>
+
+    <div class="example row align-items-stretch">
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+      <div class="example__col col-4">col-4</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-4 align-self-start">col-4</div>
+      <div class="example__col col-4 align-self-center">col-4</div>
+      <div class="example__col col-4 align-self-end">col-4</div>
+    </div>
+  </div>`
+  ],
+
+  sass: [
+  `.wrapper {
+    @include container();
+  }
+
+  .page-header,
+  .page-main,
+  .page-footer {
+    @include row();
+  }
+
+  .logo {
+    @include col(2);
+  }
+
+  .main-nav {
+    @include col();
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    @include col(3);
+  }
+
+  .page-content {
+    @include col(6);
+  }
+
+  .footer-menu {
+    @include col(4);
+  }
+
+  .license {
+    @include col(8);
+  }`,
+
+  `.container {
+    @include container();
+  }
+
+  .row {
+    @include row();
+  }
+
+  .col {
+    @include col();
+  }`,
+
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &:first-child {
+
+      .example__col {
+        @include col(12);
+      }
+    }
+
+    &:nth-child(2) {
+
+      .example__col:first-child {
+        @include col(1);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(11);
+      }
+    }
+
+    &:nth-child(3) {
+
+      .example__col:first-child {
+        @include col(2);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(10);
+      }
+    }
+
+    &:nth-child(4) {
+
+      .example__col:first-child {
+        @include col(3);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(9);
+      }
+    }
+
+    &:nth-child(5) {
+
+      .example__col:first-child {
+        @include col(4);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(8);
+      }
+    }
+
+    &:nth-child(6) {
+
+      .example__col:first-child {
+        @include col(5);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(7);
+      }
+    }
+
+    &:nth-child(7) {
+
+      .example__col:first-child {
+        @include col(6);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(6);
+      }
+    }
+
+    &:nth-child(8) {
+
+      .example__col:first-child {
+        @include col(7);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(5);
+      }
+    }
+
+    &:nth-child(9) {
+
+      .example__col:first-child {
+        @include col(8);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(4);
+      }
+    }
+
+    &:nth-child(10) {
+
+      .example__col:first-child {
+        @include col(9);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(3);
+      }
+    }
+
+    &:nth-child(11) {
+
+      .example__col:first-child {
+        @include col(10);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(2);
+      }
+    }
+
+    &:nth-child(12) {
+
+      .example__col:first-child {
+        @include col(11);
+      }
+
+      .example__col:nth-child(2) {
+        @include col(1);
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+
+      &:first-child {
+        @include justify-content(flex-start);
+      }
+
+      &:nth-child(2) {
+        @include justify-content(center);
+      }
+
+      &:nth-child(3) {
+        @include justify-content(flex-end);
+      }
+
+      &:nth-child(4) {
+        @include justify-content(space-between);
+      }
+
+      &:nth-child(5) {
+        @include justify-content(space-around);
+      }
+
+      &__col {
+        @include col(2);
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+
+      &:first-child {
+        @include align-items(flex-start);
+      }
+
+      &:nth-child(2) {
+        @include align-items(center);
+      }
+
+      &:nth-child(3) {
+        @include align-items(flex-end);
+      }
+
+      &:nth-child(4) {
+        @include align-items(stretch);
+      }
+
+      &:nth-child(5) {
+
+        .example__col:first-child {
+          @include align-self(flex-start);
+        }
+
+        .example__col:nth-child(2) {
+          @include align-self(center);
+        }
+
+        .example__col:nth-child(3) {
+          @include align-self(flex-end);
+        }
+      }
+
+      &__col {
+        @include col(4);
+      }
+    }
+  }`
+  ]
+  };

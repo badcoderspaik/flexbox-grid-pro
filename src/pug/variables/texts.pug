@@ -1,0 +1,38 @@
+-
+  const getVariant = (ru, en) => {
+    if (lang === 'ru') return ru;
+    return en;
+  };
+
+  const subtitle = getVariant(ru.subtitle, en.subtitle);
+  const overview = getVariant(ru.overview, en.overview);
+
+  const texts = {
+    intro: {
+      title: getVariant(ru.texts.intro.title, en.texts.intro.title),
+      text: getVariant(ru.texts.intro.text, en.texts.intro.text),
+      text2: getVariant(ru.texts.intro.text2, en.texts.intro.text2),
+      list: getVariant(ru.texts.intro.list, en.texts.intro.list),
+      text3: getVariant(ru.texts.intro.text3, en.texts.intro.text3)
+    },
+
+    differentWidthCols: {
+      title: getVariant(ru.texts.differentWidthCols.title, en.texts.differentWidthCols.title),
+      text: getVariant(ru.texts.differentWidthCols.text, en.texts.differentWidthCols.text)
+    },
+
+    alignment: {
+      title: getVariant(ru.texts.alignment.title, en.texts.alignment.title),
+      text: getVariant(ru.texts.alignment.text, en.texts.alignment.text),
+      subtitle1: getVariant(ru.texts.alignment.subtitle1, en.texts.alignment.subtitle1),
+      subtitle2: getVariant(ru.texts.alignment.subtitle2, en.texts.alignment.subtitle2)
+    }
+  };
+
+  const classTable = {
+    titles: getVariant(ru.classTable.titles, en.classTable.titles),
+    subtitles: getVariant(ru.classTable.subtitles, en.classTable.subtitles),
+    alignment: getVariant(ru.classTable.alignment, en.classTable.alignment),
+    direction: getVariant(ru.classTable.direction, en.classTable.direction),
+    offset: getVariant(ru.classTable.offset, en.classTable.offset)
+  }

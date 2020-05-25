@@ -1,0 +1,16 @@
+@if (type_of($partials) == list and index($partials, visible)) or (type_of($partials) == string and index($partials, visible)) {
+
+  .show {
+    @include visible(initial);
+  }
+
+  /*
+    Генерация "отображающих" классов в медиазапросах исходя из глобального объекта со значениями для медиазапросов
+    $grid-breakpoints
+  */
+  @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+    .show-#{$breakpoint-name} {
+      @include visible(initial, $breakpoint-name);
+    }
+  }
+}

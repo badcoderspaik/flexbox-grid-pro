@@ -1,0 +1,96 @@
+body
+  include ../components/page-header/page-header
+  div.container
+    main.page-main.row
+
+      +title(texts.intro.title)(class='col-12')
+      +text(texts.intro.text)(class='col-12')
+      +code-snippet({ code: snippets.html[0] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[0] , title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +text(texts.intro.text2)(class='col-12')
+        +text-list(texts.intro.list)
+      +text(texts.intro.text3)(class='col-12')
+      .col-12
+        .example.row
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+        .example.row
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+        .example.row.no-children-v-gutters
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippet({ code: snippets.html[1] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[1], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+
+
+      +title(texts.differentWidthCols.title)(class='col-12')
+      +text(texts.differentWidthCols.text)(class='col')
+      .col-12
+        .example.row
+          .example__col.col col-12
+        - for(let i = 1, j = 11; i < 12; i++, j--) {
+            .example.row
+              .example__col(class=`col-${i}`) col-#{i}
+              .example__col(class=`col-${j}`) col-#{j}
+        - }
+      +code-snippet({ code: snippets.html[2] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[2], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+
+
+      +title(texts.alignment.title)(class='col-12')
+      +text(texts.alignment.text)(class='col-12')
+      +subtitle(texts.alignment.subtitle1)(class='col-12')
+      .col-12
+        .example.example_colored.row.justify-content-start.no-children-v-gutters
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+        .example.example_colored.row.justify-content-center.no-children-v-gutters
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+        .example.example_colored.row.justify-content-end.no-children-v-gutters
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+        .example.example_colored.row.justify-content-space-between.no-children-v-gutters
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+        .example.example_colored.row.justify-content-space-around.no-children-v-gutters
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+          .example__col.col-2 col-2
+      +code-snippet({ code: snippets.html[3] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[3], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+      +subtitle(texts.alignment.subtitle2)(class='col-12')
+      .col-12
+        .example.example_colored.row.example_fixed-size.no-children-v-gutters.align-items-start
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+        .example.example_colored.row.example_fixed-size.no-children-v-gutters.align-items-center
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+        .example.example_colored.row.example_fixed-size.no-children-v-gutters.align-items-end
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+        .example.example_colored.row.example_fixed-size.no-children-v-gutters.align-items-stretch
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+          .example__col.col-4 col-4
+        .example.example_colored.row.example_fixed-size.no-children-v-gutters
+          .example__col.col-4.align-self-start col-4
+          .example__col.col-4.align-self-center col-4
+          .example__col.col-4.align-self-end col-4
+      +code-snippet({ code: snippets.html[4] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[4], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+      include ../blocks/class-table/class-table
+
