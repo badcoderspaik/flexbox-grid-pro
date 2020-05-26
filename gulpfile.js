@@ -69,7 +69,7 @@ gulp.task('lint-sass', () => {
 
 gulp.task('watch', () => {
   gulp.watch(['grid/**/*.scss', 'src/**/*.scss'], gulp.series(['development', 'production', 'docs-sass']));
-  gulp.watch(['src/**/*.pug', 'src/**/*.json'], gulp.parallel('docs-pug'));
+  gulp.watch(['src/**/*.pug'], gulp.parallel('docs-pug'));
 });
 
 gulp.task('default', gulp.series(

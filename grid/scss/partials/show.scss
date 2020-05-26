@@ -1,7 +1,7 @@
-@if (type_of($partials) == list and index($partials, visible)) or (type_of($partials) == string and index($partials, visible)) {
+@if (type_of($partials) == list and index($partials, show)) or (type_of($partials) == string and index($partials, show)) {
 
   .show {
-    @include visible(initial);
+    @include show(initial);
   }
 
   /*
@@ -10,7 +10,7 @@
   */
   @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
     .show-#{$breakpoint-name} {
-      @include visible(initial, $breakpoint-name);
+      @include show(initial, $breakpoint-name);
     }
   }
 }

@@ -7,7 +7,8 @@
     "build": "gulp",
     "dev": "gulp development",
     "prod": "gulp production",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gh-pages": "^2.2.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-csso": "^4.0.1",
     "gulp-group-css-media-queries": "^1.2.2",

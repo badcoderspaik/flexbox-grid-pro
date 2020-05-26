@@ -24,6 +24,14 @@
         "subtitle1": "Горизонтальное",
         "subtitle2": "Вертикальное",
         "text": "Для горизонтального и вертикального выравнивания колонок воспользуйтесь необходимыми классами или миксинами."
+      },
+      "direction": {
+        "title": "Направление расположения главной оси",
+        "text": "Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:"
+      },
+      "ordering": {
+        "title": "Порядок расположения колонок",
+        "text": "Для указания порядка расположения столбцов в строке воспользуйтесь нужными классами или миксинами:"
       }
     },
     "classTable": {
@@ -491,6 +499,61 @@
           },
           "description": "Обнуляют внешние горизонтальные отступы элементов колонок в строке. Применяются к элементу строки."
         }
+      ],
+      "hide": [
+        {
+          "title": "Скрытие элементов",
+          "className": [
+            "hide"
+          ],
+          "mixin": {
+            "name": "hide( $breakpoint )",
+            "description": "Скрывает элемент, устанавливая его свойство display в none. Если значение аргумента <span class='inline-snippet'>$breakpoint</span> соответствует одному из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>, правило будет применено в соответствующем медиазапросе. Применяется к любому элементу сетки.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Необязательный параметр. Если для него передано значение, скрытие для элемента сработает в медиазапросе согласно этому значению. Значением аргумента должно быть одно из имен ключей глобального объекта <span class='inline-snippet'>$grid-breakpoints</span>."
+              }
+            ]
+          },
+          "description": "Скрывает элемент, устанавливая его свойство display в none. Применяется к любому элементу сетки."
+        }
+      ],
+      "show": [
+        {
+          "title": "Отображение скрытых элементов",
+          "className": [
+            "show"
+          ],
+          "mixin": {
+            "name": "show( $display, $breakpoint )",
+            "description": "Отображает скрытые элементы, устанавливая его свойство display в любое доступное для этого свойства значение, отличное от none. Применяется к любому элементу сетки.",
+            "options": [
+              {
+                "name": "display",
+                "type": "String",
+                "available": [
+                  "Любое доступное для css-свойства <span class='inline-snippet'>display</span> значение, кроме <span class='inline-snippet'>none</span>."
+                ],
+                "default": "initial",
+                "description": "Устанавливает свойство display элемента в указанное значение."
+              }
+            ]
+          },
+          "description": "Отображает скрытые элементы, устанавливая его свойство display в любое доступное для этого свойства значение, отличное от none. Применяется к любому элементу сетки."
+        }
       ]
     }
   },
@@ -519,6 +582,14 @@
         "subtitle1": "Horizontal",
         "subtitle2": "Vertical",
         "text": "For horizontal and vertical alignment of columns use the necessary classes or mixins."
+      },
+      "direction": {
+        "title": "Направление расположения главной оси",
+        "text": "Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:"
+      },
+      "ordering": {
+        "title": "Column layout",
+        "text": "To specify the order of the columns in the row, use the necessary classes or mixins:"
       }
     },
     "classTable": {
@@ -852,7 +923,7 @@
           ],
           "mixin": {
             "name": "no-h-gutters ( $breakpoint )",
-            "description": "Zeroes out the horizontal horizontal indents of the element. Applies to both the row element and the column element.",
+            "description": "Zeroes out the horizontal indents of the element. Applies to both the row element and the column element.",
             "options": [
               {
                 "name": "breakpoint",
@@ -932,10 +1003,10 @@
         },
         {
           "className": [
-            "no-children-h-gutters( $breakpoint )"
+            "no-children-h-gutters"
           ],
           "mixin": {
-            "name": "no-children-h-gutters",
+            "name": "no-children-h-gutters( $breakpoint )",
             "description": "Zeroes the outer horizontal indentation of the column elements in the row. Applies to the row element.",
             "options": [
               {
@@ -960,10 +1031,10 @@
         },
         {
           "className": [
-            "no-children-v-gutters( $breakpoint )"
+            "no-children-v-gutters"
           ],
           "mixin": {
-            "name": "no-children-v-gutters",
+            "name": "no-children-v-gutters( $breakpoint )",
             "description": "Zero out the outer vertical indentation of the column elements in the row. Applies to the row element.",
             "options": [
               {
@@ -984,7 +1055,62 @@
               }
             ]
           },
-          "description": "Zero the outer horizontal indentation of the column elements in the row. Applies to the row element."
+          "description": "Zero the outer vertical indentation of the column elements in the row. Applies to the row element."
+        }
+      ],
+      "hide": [
+        {
+          "title": "Hide items",
+          "className": [
+            "hide"
+          ],
+          "mixin": {
+            "name": "hide ($ breakpoint)",
+            "description": "Hides the element by setting its display property to none. If the value of the argument <span class = 'inline-snippet'>$breakpoint</span> matches one of the key names of the global object <span class = 'inline-snippet' > $grid-breakpoints </span>, the rule will be applied in the corresponding media request. Applies to any grid item.",
+            "options": [
+              {
+                "name": "breakpoint",
+                "type": "String",
+                "available": [
+                  "desktop,",
+                  "laptop,",
+                  "laptop-md,",
+                  "tablet-landscape,",
+                  "phone-landscape,",
+                  "phone,",
+                  "phone-md,",
+                  "phone-sm"
+                ],
+                "default": "null",
+                "description": "Optional parameter. If a value is passed for it, hiding for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. "
+              }
+            ]
+          },
+          "description": "Hides the element by setting its display property to none. Applies to any grid item."
+        }
+      ],
+      "show": [
+        {
+          "title": "Show hidden items",
+          "className": [
+            "show"
+          ],
+          "mixin": {
+            "name": "show ($display, $breakpoint)",
+            "description": "Displays hidden elements by setting its display property to any value available for this property other than none. Applies to any element of the grid.",
+            "options": [
+              {
+                "name": "display",
+                "type": "String",
+                "available": [
+                  "Any value available for the css property <span class = 'inline-snippet'> display </span>, except for <span class = 'inline-snippet'> none </span>."
+                ],
+                "default": "initial",
+                "description": "Sets the display property of the element to the specified value."
+              }
+            ]
+          },
+          "description": "Displays hidden elements by setting its display property to any value available for this property other than none. Applies to any grid element."
         }
       ]
     }

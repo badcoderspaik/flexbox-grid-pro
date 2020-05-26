@@ -92,5 +92,42 @@ body
       +code-snippet({ code: snippets.html[4] })(class='col col-phone-landscape-12')
       +code-snippet({ code: snippets.sass[4], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
 
-      include ../blocks/class-table/class-table
+      +title(texts.direction.title)(class='col-12')
+      +text(texts.direction.text)(class='col-12')
+      .col-12
+        .example.row
+          .example__col.col-3 1
+          .example__col.col-3 2
+          .example__col.col-3 3
+          .example__col.col-3 4
+        .example.row.direction-row-reverse
+          .example__col.col-3 1
+          .example__col.col-3 2
+          .example__col.col-3 3
+          .example__col.col-3 4
+        .example.row.direction-column.example_colored
+          .example__col.col-3 1
+          .example__col.col-3 2
+          .example__col.col-3 3
+          .example__col.col-3.no-v-gutters 4
+        .example.row.direction-column-reverse.example_colored
+          .example__col.col-3.no-v-gutters 1
+          .example__col.col-3 2
+          .example__col.col-3 3
+          .example__col.col-3 4
+      +code-snippet({ code: snippets.html[5] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[5], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+      +title(texts.ordering.title)(class='col-12')
+      +text(texts.ordering.text)(class='col-12')
+      .col-12
+        .example.row
+          .example__col.col-2.order-2 1
+          .example__col.col-2.order-1 2
+          .example__col.col-2.order-4 3
+          .example__col.col-2.order-3 4
+          .example__col.col-2.order-6 5
+          .example__col.col-2.order-5 6
+      +code-snippet({ code: snippets.html[6] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[6], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
 

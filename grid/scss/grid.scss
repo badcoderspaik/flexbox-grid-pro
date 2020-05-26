@@ -36,7 +36,7 @@ $partials: (
   hide,
   offset,
   ordering,
-  visible,
+  show,
   gutters
 ) !default;
 
@@ -45,7 +45,7 @@ $partials: (
 @import 'partials/ordering';
 @import 'partials/direction';
 @import 'partials/hide';
-@import 'partials/visible';
+@import 'partials/show';
 @import 'partials/offset';
 @import 'partials/gutters.scss';
 @import 'base';
