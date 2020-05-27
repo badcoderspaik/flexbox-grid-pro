@@ -516,7 +516,7 @@
         </div>
         <div class="code-snippet col col-phone-landscape-12">
           <h3 class="code-snippet__title">HTML</h3>
-          <pre><code>&lt;div class=&quot;col-12&quot;&gt;
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;example row align-items-start&quot;&gt;
     &lt;div class=&quot;example__col col-4&quot;&gt;col-4&lt;/div&gt;
     &lt;div class=&quot;example__col col-4&quot;&gt;col-4&lt;/div&gt;
@@ -593,611 +593,424 @@
   }
 }</code></pre>
         </div>
-        <h3 class="title col-12">Alignment</h3>
-        <div class="class-table-wrapper col-12">
-          <table class="class-table">
-            <tbody>
-              <tr>
-                <th>Class</th>
-                <th>Corresponding Mixin</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>justify-content-start,</div>
-                  <div>justify-content-center,</div>
-                  <div>justify-content-end,</div>
-                  <div>justify-content-space-between,</div>
-                  <div>justify-content-space-around</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">justify-content( $align, $breakpoint )</div>
-                  <div class="class-table__mixin-description">Aligns the columns in a row according to the <span class = 'inline-snippet'> $align </span> parameter, which must take one of the following values: <span class = 'inline-snippet'> flex-start </span>, <span class='inline-snippet'>flex-end</span>, <span class = 'inline-snippet'> center </span>, <span class = 'inline-snippet'> space-between </span> , <span class = 'inline-snippet'> space-around </span>. Applies to row elements (<span class = 'inline-snippet'> row </span>) of the grid. If the argument <span class = 'inline-snippet'> $breakpoint </span> is passed, alignment will work in the media query according to the value of this argument. The argument value must be one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span>.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>align</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>flex-start,</div>
-                            <div>center,</div>
-                            <div>flex-end,</div>
-                            <div>space-between,</div>
-                            <div>space-around,</div>
-                          </td>
-                          <td class="class-table__default">flex-start</td>
-                          <td>Specifies the direction in which the columns in the row are laid out.</td>
-                        </tr>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, the alignment will work in the media query according to this value. The argument value must be one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span> .</td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Align the columns in the row according to the properties of the flex container: flex-start, center, flex-end, space-between, space-around. Applies to a line item.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>align-items-start,</div>
-                  <div>align-items-center,</div>
-                  <div>align-items-end,</div>
-                  <div>align-items-stretch,</div>
-                  <div>align-items-baseline</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">align-items( $align, $breakpoint )</div>
-                  <div class="class-table__mixin-description">Aligns the columns in a row according to the <span class = 'inline-snippet'> $align </span> parameter, which must take one of the following values: <span class = 'inline-snippet'> flex-start </span>, <span class = 'inline-snippet'> flex-end </span>, <span class = 'inline-snippet'> center </span>, <span class = 'inline-snippet'> stretch </span>, <span class = 'inline-snippet'> baseline </span>. Applies to row elements (<span class = 'inline-snippet'> row </span>) of the grid. If the argument <span class = 'inline-snippet'> $breakpoint </span> is passed, alignment will work in the media query according to the value of this argument. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>align</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>flex-start,</div>
-                            <div>center,</div>
-                            <div>flex-end,</div>
-                            <div>stretch,</div>
-                            <div>baseline</div>
-                          </td>
-                          <td class="class-table__default">flex-start</td>
-                          <td>Specifies how columns are aligned.</td>
-                        </tr>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, the alignment will work in the media query according to this value. The argument value must be one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span>.</td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Align the columns in a row according to the properties of the flex container: flex-start, center, flex-end, stretch, baseline. Applies to a line item.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>align-self-start,</div>
-                  <div>align-self-center,</div>
-                  <div>align-self-end,</div>
-                  <div>align-self-stretch,</div>
-                  <div>align-self-baseline</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">align-self( $align, $breakpoint )</div>
-                  <div class="class-table__mixin-description">Aligns a single column in a row according to the <span class = 'inline-snippet'> $align </span> parameter, which must take one of the following values: <span class = 'inline-snippet'> flex-start </span> , <span class = 'inline-snippet'> flex-end </span>, <span class = 'inline-snippet'> center </span>, <span class = 'inline-snippet'> stretch </span> , <span class = 'inline-snippet'> baseline </span>. Applies to column elements (<span class = 'inline-snippet'> col </span>) of the grid. If the argument <span class = 'inline-snippet'> $breakpoint </span> is passed, alignment will work in the media query according to the value of this argument. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>align</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>flex-start,</div>
-                            <div>center,</div>
-                            <div>flex-end,</div>
-                            <div>stretch,</div>
-                            <div>baseline,</div>
-                          </td>
-                          <td class="class-table__default">flex-start</td>
-                          <td>Specifies how to align a single column in a row.</td>
-                        </tr>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, the alignment will work in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>.</td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Align a single column in a row according to the properties of the flex container: flex-start, center, flex-end, stretch, baseline. Apply to a column element.</td>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <h3 class="title col-12">Направление расположения главной оси</h3>
+        <div class="text col-12">Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:
         </div>
-        <h3 class="title col-12">The direction of the main axis</h3>
-        <div class="class-table-wrapper col-12">
-          <table class="class-table">
-            <tbody>
-              <tr>
-                <th>Class</th>
-                <th>Corresponding Mixin</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>direction-row,</div>
-                  <div>direction-row-reverse,</div>
-                  <div>direction-column,</div>
-                  <div>direction-column-reverse</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">direction ($direction, $breakpoint)</div>
-                  <div class="class-table__mixin-description">Specifies the direction of the main axis along which the columns in the row are aligned. One of the following values ​​should be passed as an argument to the first parameter <span class='inline-snippet'>$direction</span>: <span class='inline-snippet'>row</span>, <span class='inline-snippet'>row-reverse</span>, <span class='inline-snippet'>column</span>, <span class='inline-snippet'>column-reverse</span>. If the second argument is passed the value corresponding to one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span>, the rule will be applied in the media query. </div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>direction</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>row,</div>
-                            <div>row-reverse,</div>
-                            <div>column,</div>
-                            <div>column-reverse</div>
-                          </td>
-                          <td class="class-table__default">row</td>
-                          <td>Specifies the direction of the main axis along which the columns in the row line up.</td>
-                        </tr>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone -sm </div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, setting the direction of the main axis will work in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'>$grid-breakpoints</span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Set the direction of the main axis along which the columns in the row are aligned, according to the properties of the flex container: row, row-reverse, column, column-reverse. Applied to the row element <span class = 'inline-snippet' > row </span>. </td>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-12">
+          <div class="example row">
+            <div class="example__col col-3">1</div>
+            <div class="example__col col-3">2</div>
+            <div class="example__col col-3">3</div>
+            <div class="example__col col-3">4</div>
+          </div>
+          <div class="example row direction-row-reverse">
+            <div class="example__col col-3">1</div>
+            <div class="example__col col-3">2</div>
+            <div class="example__col col-3">3</div>
+            <div class="example__col col-3">4</div>
+          </div>
+          <div class="example row direction-column example_colored">
+            <div class="example__col col-3">1</div>
+            <div class="example__col col-3">2</div>
+            <div class="example__col col-3">3</div>
+            <div class="example__col col-3 no-v-gutters">4</div>
+          </div>
+          <div class="example row direction-column-reverse example_colored">
+            <div class="example__col col-3 no-v-gutters">1</div>
+            <div class="example__col col-3">2</div>
+            <div class="example__col col-3">3</div>
+            <div class="example__col col-3">4</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row direction-row-reverse&quot;&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row direction-column&quot;&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row direction-column-reverse&quot;&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col-3&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+
+    &amp;:nth-child(2) {
+      @include direction(row-reverse);
+    }
+
+    &amp;:nth-child(3) {
+      @include direction(column);
+    }
+
+    &amp;:nth-child(4) {
+      @include direction(column-reverse);
+    }
+
+    &amp;__col {
+      @include col(3);
+    }
+  }
+}</code></pre>
+        </div>
+        <h3 class="title col-12">Column order</h3>
+        <div class="text col-12">To specify the order of the columns in the row, use the necessary classes or mixins:
+        </div>
+        <div class="col-12">
+          <div class="example row">
+            <div class="example__col col-2 order-2">1</div>
+            <div class="example__col col-2 order-1">2</div>
+            <div class="example__col col-2 order-4">3</div>
+            <div class="example__col col-2 order-3">4</div>
+            <div class="example__col col-2 order-6">5</div>
+            <div class="example__col col-2 order-5">6</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-2 order-2&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col-2 order-1&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col-2 order-4&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col-2 order-3&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;example__col col-2 order-6&quot;&gt;5&lt;/div&gt;
+    &lt;div class=&quot;example__col col-2 order-5&quot;&gt;6&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+
+    &amp;__col {
+      @include col(2);
+
+      &amp;:first-child {
+        @include order(2);
+      }
+
+      &amp;:nth-child(2) {
+        @include order(1);
+      }
+
+      &amp;:nth-child(3) {
+        @include order(4);
+      }
+
+      &amp;:nth-child(4) {
+        @include order(3);
+      }
+
+      &amp;:nth-child(5) {
+        @include order(6);
+      }
+
+      &amp;:last-child {
+        @include order(5);
+      }
+    }
+  }
+}</code></pre>
         </div>
         <h3 class="title col-12">Column offset</h3>
-        <div class="class-table-wrapper col-12">
-          <table class="class-table">
-            <tbody>
-              <tr>
-                <th>Class</th>
-                <th>Corresponding Mixin</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>offset-left-1 - offset-left-12,</div>
-                  <div>offset-right-1 - offset-right-12,</div>
-                  <div>offset-left-auto,</div>
-                  <div>offset-right-auto</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">offset ( $direction, $offset, $breakpoint )</div>
-                  <div class="class-table__mixin-description">Shifts a column in a row by <span class = 'inline-snippet'> $offset </span> - an integer number of columns, to the right - <span class = 'inline-snippet'> $direction </span>: right or left - <span class = 'inline-snippet'> $direction </span>: left. If auto is used as the second argument, the column is shifted to free space in one direction or another. If the argument value is <span class = 'inline-snippet'> $breakpoint </span> corresponds to one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>, the rules are applied in the corresponding media query. </div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>direction</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>left,</div>
-                            <div>right</div>
-                          </td>
-                          <td class="class-table__default">right</td>
-                          <td>Depends on this parameter in which direction the columns will shift - to the right or left.</td>
-                        </tr>
-                        <tr>
-                          <td>offset</td>
-                          <td>Number | String</td>
-                          <td class="class-table__available">
-                            <div>integer number of columns,</div>
-                            <div>auto</div>
-                          </td>
-                          <td class="class-table__default">auto</td>
-                          <td>The number of columns by which the column will be shifted. If the value <span class = 'inline-snippet'> auto </span> is passed, the column will shift left/right (depends on the second parameter <span class = 'inline- snippet '> direction </span>) to all available free space. </td>
-                        </tr>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, the column call will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </ span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Shift the columns in the row by a certain number of columns to the right or left.</td>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="text col-12">Use column classes or mixins to offset columns:
         </div>
-        <h3 class="title col-12">Column layout</h3>
-        <div class="class-table-wrapper col-12">
-          <table class="class-table">
-            <tbody>
-              <tr>
-                <th>Class</th>
-                <th>Corresponding Mixin</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>order-0 - order-12,</div>
-                  <div>order-first,</div>
-                  <div>order-last,</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">order ($order,$ breakpoint)</div>
-                  <div class="class-table__mixin-description">Sorts the columns in a row according to the parameter <span class = 'inline-snippet'> $order </span> - an integer that determines the order of columns - the smaller the number, the closer the column will be to the beginning of the line. If when the mixin is called, it will be given the second argument <span class = 'inline-snippet'> $breakpoint </span>, and its value will correspond to one of the key names of the global object <span class = 'inline-snippet'> $grid -breakpoints </span>, then the sequencing rule will only work in the corresponding media request. Applies to row element <span class = 'inline-snippet'>row</span></div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>order</td>
-                          <td>Number | String</td>
-                          <td class="class-table__available">
-                            <div>0 is the total number of columns,</div>
-                            <div>first,</div>
-                            <div>last</div>
-                          </td>
-                          <td class="class-table__default">0</td>
-                          <td>An integer or line that defines the visual position of the column in the grid line. The smaller the number, the closer the column will be to the beginning of the line.</td>
-                        </tr>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, the column call will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </ span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Set the order of the visual arrangement of the columns in the row. Applies to row element <span class = 'inline-snippet'>row</span></td>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-12">
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-1">of-1</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-2">of-2</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-3">of-3</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-4">of-4</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-5">of-5</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-6">of-6</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-7">of-7</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-8">of-8</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-9">of-9</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-10">of-10</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-11">of-11</div>
+          </div>
         </div>
-        <h3 class="title col-12">Reset margins</h3>
-        <div class="class-table-wrapper col-12">
-          <table class="class-table">
-            <tbody>
-              <tr>
-                <th>Class</th>
-                <th>Corresponding Mixin</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>no-gutters</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">no-gutters ( $breakpoint )</div>
-                  <div class="class-table__mixin-description">Zeros the outer margins of the element. Applies to any grid element.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>$breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Zero out all indentation of the element. Apply to both the line element and the grid element.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>no-h-gutters</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">no-h-gutters ( $breakpoint )</div>
-                  <div class="class-table__mixin-description">Zeroes out the horizontal horizontal indents of the element. Applies to both the row element and the column element.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Zero out the horizontal horizontal padding of the element. Applies to both the row element and the column element.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>no-v-gutters</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">no-v-gutters ( $breakpoint )</div>
-                  <div class="class-table__mixin-description">Zeros the outer vertical indents of the element. Applies to both the row element and the column element.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Zero the outer vertical padding of the element. Applies to both the row element and the column element.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>no-children-gutters</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">no-children-gutters( $breakpoint )</div>
-                  <div class="class-table__mixin-description">Zero out the indentation of the column elements in the row. Applies to the row element.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Zero the outer margins of the column elements in the row. Apply to the row element.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>no-children-h-gutters( $breakpoint )</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">no-children-h-gutters</div>
-                  <div class="class-table__mixin-description">Zeroes the outer horizontal indentation of the column elements in the row. Applies to the row element.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Zero the outer horizontal indentation of the column elements in the row. Applies to the row element.</td>
-                </td>
-              </tr>
-              <tr>
-                <td class="class-table__name">
-                  <div>no-children-v-gutters( $breakpoint )</div>
-                </td>
-                <td>
-                  <div class="class-table__mixin-name">no-children-v-gutters</div>
-                  <div class="class-table__mixin-description">Zero out the outer vertical indentation of the column elements in the row. Applies to the row element.</div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Available Values</th>
-                        <th>Default Value</th>
-                        <th>Description</th>
-                        <tr>
-                          <td>breakpoint</td>
-                          <td>String</td>
-                          <td class="class-table__available">
-                            <div>desktop,</div>
-                            <div>laptop,</div>
-                            <div>laptop-md,</div>
-                            <div>tablet-landscape,</div>
-                            <div>phone-landscape,</div>
-                            <div>phone,</div>
-                            <div>phone-md,</div>
-                            <div>phone-sm</div>
-                          </td>
-                          <td class="class-table__default">null</td>
-                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
-                        </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <td class="class-table__description">Zero the outer horizontal indentation of the column elements in the row. Applies to the row element.</td>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-1&quot;&gt;of-1&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-2&quot;&gt;of-2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-3&quot;&gt;of-3&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-4&quot;&gt;of-4&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-5&quot;&gt;of-5&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-6&quot;&gt;of-6&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-7&quot;&gt;of-7&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-8&quot;&gt;of-8&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-9&quot;&gt;of-9&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-10&quot;&gt;of-10&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 no-v-gutters offset-right-11&quot;&gt;of-11&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+}
+
+.example {
+  @include row();
+
+  &amp;:first-child {
+
+    .example__col {
+      @include offset-right(1);
+    }
+  }
+
+  &amp;:nth-child(2) {
+
+    .example__col {
+      @include offset-right(2);
+    }
+  }
+
+  &amp;:nth-child(3) {
+
+    .example__col {
+      @include offset-right(3);
+    }
+  }
+
+  &amp;:nth-child(4) {
+
+    .example__col {
+      @include offset-right(4);
+    }
+  }
+
+  &amp;:nth-child(5) {
+
+    .example__col {
+      @include offset-right(5);
+    }
+  }
+
+  &amp;:nth-child(6) {
+
+    .example__col {
+      @include offset-right(6);
+    }
+  }
+
+  &amp;:nth-child(7) {
+
+    .example__col {
+      @include offset-right(7);
+    }
+  }
+
+  &amp;:nth-child(8) {
+
+    .example__col {
+      @include offset-right(8);
+    }
+  }
+
+  &amp;:nth-child(9) {
+
+    .example__col {
+      @include offset-right(9);
+    }
+  }
+
+  &amp;:nth-child(10) {
+
+    .example__col {
+      @include offset-right(10);
+    }
+  }
+
+  &amp;:nth-child(11) {
+
+    .example__col {
+      @include offset-right(11);
+    }
+  }
+
+  &amp;:nth-child(12) {
+
+    .example__col {
+      @include offset-right(12);
+    }
+  }
+}</code></pre>
+        </div>
+        <h3 class="title col-12">Hide and show items</h3>
+        <h4 class="subtitle col-12">Hide</h4>
+        <div class="text col-12">To hide the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less:
+        </div>
+        <div class="col-12">
+          <div class="example row">
+            <div class="example__col col">1</div>
+            <div class="example__col col hide-laptop-md">2</div>
+            <div class="example__col col">3</div>
+            <div class="example__col col hide-laptop-md">4</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+}
+
+.example {
+  @include row();
+
+  &amp;__col {
+    @include col();
+  }
+
+  &amp;:nth-child(2),
+  &amp;:nth-child(4) {
+    .example__col {
+      @include hide(laptop-md);
+    }
+  }
+}</code></pre>
+        </div>
+        <h4 class="subtitle col-12">Display</h4>
+        <div class="text col-12">To display the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less, but will be displayed again with a viewport width of 768px:
+        </div>
+        <div class="col-12">
+          <div class="example row">
+            <div class="example__col col">1</div>
+            <div class="example__col col hide-laptop-md show-tablet-landscape">2</div>
+            <div class="example__col col">3</div>
+            <div class="example__col col hide-laptop-md show-tablet-landscape">4</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md show-tablet-landscape&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md show-tablet-landscape&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+}
+
+.example {
+  @include row();
+
+  &amp;__col {
+    @include col();
+  }
+
+  &amp;:nth-child(2),
+  &amp;:nth-child(4) {
+    .example__col {
+      @include hide(laptop-md);
+      @include show(tablet-landscape);
+    }
+  }
+}</code></pre>
         </div>
       </main>
     </div>
