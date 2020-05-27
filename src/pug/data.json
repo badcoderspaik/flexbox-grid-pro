@@ -32,6 +32,17 @@
       "ordering": {
         "title": "Порядок расположения колонок",
         "text": "Для указания порядка расположения столбцов в строке воспользуйтесь нужными классами или миксинами:"
+      },
+      "offset": {
+        "title": "Смещение колонок",
+        "text": "Для смещения колонок используйте нужные классы или миксины:"
+      },
+      "show_hide": {
+        "title": "Скрытие и отображение элементов",
+        "subtitle1": "Скрытие",
+        "subtitle2": "Отображение",
+        "text": "Для скрытия элементов используйте нужные классы или миксины. В примере ниже вторая и четвертая колонки будут скрыты при ширине вьюпорта 960px и меньше:",
+        "text2": "Для отображения элементов используйте нужные классы или миксины. В примере ниже вторая и четвертая колонки будут скрыты при ширине вьюпорта 960px и меньше, но снова отобразятся при ширине вьюпорта 768px:"
       }
     },
     "classTable": {
@@ -588,8 +599,19 @@
         "text": "Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:"
       },
       "ordering": {
-        "title": "Column layout",
+        "title": "Column order",
         "text": "To specify the order of the columns in the row, use the necessary classes or mixins:"
+      },
+      "offset": {
+        "title": "Column offset",
+        "text": "Use column classes or mixins to offset columns:"
+      },
+      "show_hide": {
+        "title": "Hide and show items",
+        "subtitle1": "Hide",
+        "subtitle2": "Display",
+        "text": "To hide the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less:",
+        "text2": "To display the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less, but will be displayed again with a viewport width of 768px:"
       }
     },
     "classTable": {

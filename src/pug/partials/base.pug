@@ -131,3 +131,37 @@ body
       +code-snippet({ code: snippets.html[6] })(class='col col-phone-landscape-12')
       +code-snippet({ code: snippets.sass[6], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
 
+      +title(texts.offset.title)(class='col-12')
+      +text(texts.offset.text)(class='col-12')
+      .col-12
+        - for (let i = 1; i < 12; i++) {
+            .example.row.example_colored
+              .example__col.col-1.no-v-gutters(class=`offset-right-${i}`) of-#{i}
+        - }
+      +code-snippet({ code: snippets.html[7] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[7], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+      +title(texts.show_hide.title)(class='col-12')
+      +subtitle(texts.show_hide.subtitle1)(class='col-12')
+      +text(texts.show_hide.text)(class='col-12')
+      .col-12
+        .example.row
+          .example__col.col 1
+          .example__col.col.hide-laptop-md 2
+          .example__col.col 3
+          .example__col.col.hide-laptop-md 4
+      +code-snippet({ code: snippets.html[8] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[8], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+      +subtitle(texts.show_hide.subtitle2)(class='col-12')
+      +text(texts.show_hide.text2)(class='col-12')
+      .col-12
+        .example.row
+          .example__col.col 1
+          .example__col.col.hide-laptop-md.show-tablet-landscape 2
+          .example__col.col 3
+          .example__col.col.hide-laptop-md.show-tablet-landscape 4
+
+      +code-snippet({ code: snippets.html[9] })(class='col col-phone-landscape-12')
+      +code-snippet({ code: snippets.sass[9], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+

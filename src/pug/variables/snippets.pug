@@ -192,6 +192,70 @@
       <div class="example__col col-2 order-6">5</div>
       <div class="example__col col-2 order-5">6</div>
     </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col-1 offset-right-1">of-1</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-2">of-2</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-3">of-3</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-4">of-4</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-5">of-5</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-6">of-6</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-7">of-7</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-8">of-8</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-9">of-9</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 offset-right-10">of-10</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-1 no-v-gutters offset-right-11">of-11</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col">1</div>
+      <div class="example__col col hide-laptop-md">2</div>
+      <div class="example__col col">3</div>
+      <div class="example__col col hide-laptop-md">4</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col">1</div>
+      <div class="example__col col hide-laptop-md show-tablet-landscape">2</div>
+      <div class="example__col col">3</div>
+      <div class="example__col col hide-laptop-md show-tablet-landscape">4</div>
+    </div>
   </div>`
   ],
 
@@ -510,6 +574,135 @@
         &:last-child {
           @include order(5);
         }
+      }
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &:first-child {
+
+      .example__col {
+        @include offset-right(1);
+      }
+    }
+
+    &:nth-child(2) {
+
+      .example__col {
+        @include offset-right(2);
+      }
+    }
+
+    &:nth-child(3) {
+
+      .example__col {
+        @include offset-right(3);
+      }
+    }
+
+    &:nth-child(4) {
+
+      .example__col {
+        @include offset-right(4);
+      }
+    }
+
+    &:nth-child(5) {
+
+      .example__col {
+        @include offset-right(5);
+      }
+    }
+
+    &:nth-child(6) {
+
+      .example__col {
+        @include offset-right(6);
+      }
+    }
+
+    &:nth-child(7) {
+
+      .example__col {
+        @include offset-right(7);
+      }
+    }
+
+    &:nth-child(8) {
+
+      .example__col {
+        @include offset-right(8);
+      }
+    }
+
+    &:nth-child(9) {
+
+      .example__col {
+        @include offset-right(9);
+      }
+    }
+
+    &:nth-child(10) {
+
+      .example__col {
+        @include offset-right(10);
+      }
+    }
+
+    &:nth-child(11) {
+
+      .example__col {
+        @include offset-right(11);
+      }
+    }
+
+    &:nth-child(12) {
+
+      .example__col {
+        @include offset-right(12);
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      .example__col {
+        @include hide(laptop-md);
+      }
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      .example__col {
+        @include hide(laptop-md);
+        @include show(tablet-landscape);
       }
     }
   }`

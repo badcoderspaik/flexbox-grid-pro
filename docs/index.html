@@ -680,7 +680,7 @@
   }
 }</code></pre>
         </div>
-        <h3 class="title col-12">Column layout</h3>
+        <h3 class="title col-12">Column order</h3>
         <div class="text col-12">To specify the order of the columns in the row, use the necessary classes or mixins:
         </div>
         <div class="col-12">
@@ -740,6 +740,274 @@
       &amp;:last-child {
         @include order(5);
       }
+    }
+  }
+}</code></pre>
+        </div>
+        <h3 class="title col-12">Column offset</h3>
+        <div class="text col-12">Use column classes or mixins to offset columns:
+        </div>
+        <div class="col-12">
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-1">of-1</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-2">of-2</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-3">of-3</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-4">of-4</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-5">of-5</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-6">of-6</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-7">of-7</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-8">of-8</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-9">of-9</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-10">of-10</div>
+          </div>
+          <div class="example row example_colored">
+            <div class="example__col col-1 no-v-gutters offset-right-11">of-11</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-1&quot;&gt;of-1&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-2&quot;&gt;of-2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-3&quot;&gt;of-3&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-4&quot;&gt;of-4&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-5&quot;&gt;of-5&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-6&quot;&gt;of-6&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-7&quot;&gt;of-7&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-8&quot;&gt;of-8&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-9&quot;&gt;of-9&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 offset-right-10&quot;&gt;of-10&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-1 no-v-gutters offset-right-11&quot;&gt;of-11&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+}
+
+.example {
+  @include row();
+
+  &amp;:first-child {
+
+    .example__col {
+      @include offset-right(1);
+    }
+  }
+
+  &amp;:nth-child(2) {
+
+    .example__col {
+      @include offset-right(2);
+    }
+  }
+
+  &amp;:nth-child(3) {
+
+    .example__col {
+      @include offset-right(3);
+    }
+  }
+
+  &amp;:nth-child(4) {
+
+    .example__col {
+      @include offset-right(4);
+    }
+  }
+
+  &amp;:nth-child(5) {
+
+    .example__col {
+      @include offset-right(5);
+    }
+  }
+
+  &amp;:nth-child(6) {
+
+    .example__col {
+      @include offset-right(6);
+    }
+  }
+
+  &amp;:nth-child(7) {
+
+    .example__col {
+      @include offset-right(7);
+    }
+  }
+
+  &amp;:nth-child(8) {
+
+    .example__col {
+      @include offset-right(8);
+    }
+  }
+
+  &amp;:nth-child(9) {
+
+    .example__col {
+      @include offset-right(9);
+    }
+  }
+
+  &amp;:nth-child(10) {
+
+    .example__col {
+      @include offset-right(10);
+    }
+  }
+
+  &amp;:nth-child(11) {
+
+    .example__col {
+      @include offset-right(11);
+    }
+  }
+
+  &amp;:nth-child(12) {
+
+    .example__col {
+      @include offset-right(12);
+    }
+  }
+}</code></pre>
+        </div>
+        <h3 class="title col-12">Hide and show items</h3>
+        <h4 class="subtitle col-12">Hide</h4>
+        <div class="text col-12">To hide the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less:
+        </div>
+        <div class="col-12">
+          <div class="example row">
+            <div class="example__col col">1</div>
+            <div class="example__col col hide-laptop-md">2</div>
+            <div class="example__col col">3</div>
+            <div class="example__col col hide-laptop-md">4</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+}
+
+.example {
+  @include row();
+
+  &amp;__col {
+    @include col();
+  }
+
+  &amp;:nth-child(2),
+  &amp;:nth-child(4) {
+    .example__col {
+      @include hide(laptop-md);
+    }
+  }
+}</code></pre>
+        </div>
+        <h4 class="subtitle col-12">Display</h4>
+        <div class="text col-12">To display the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less, but will be displayed again with a viewport width of 768px:
+        </div>
+        <div class="col-12">
+          <div class="example row">
+            <div class="example__col col">1</div>
+            <div class="example__col col hide-laptop-md show-tablet-landscape">2</div>
+            <div class="example__col col">3</div>
+            <div class="example__col col hide-laptop-md show-tablet-landscape">4</div>
+          </div>
+        </div>
+        <div class="code-snippet col col-phone-landscape-12">
+          <h3 class="code-snippet__title">HTML</h3>
+          <pre><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md show-tablet-landscape&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide-laptop-md show-tablet-landscape&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">.container {
+  @include container();
+}
+
+.example {
+  @include row();
+
+  &amp;__col {
+    @include col();
+  }
+
+  &amp;:nth-child(2),
+  &amp;:nth-child(4) {
+    .example__col {
+      @include hide(laptop-md);
+      @include show(tablet-landscape);
     }
   }
 }</code></pre>
