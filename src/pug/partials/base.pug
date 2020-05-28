@@ -266,3 +266,23 @@ body
             li.class-list__item
               span.inline-snippet col-#{breakpoint}-1 - col-#{breakpoint}-12
 
+
+      +title(texts.customization.title)(class='col-12')
+      +text(texts.customization.text)(class='col-12')
+      +subtitle(texts.customization.subtitle)(class='col-12')
+      +text(texts.customization.text2)(class='col-12')
+      +subtitle(texts.customization.subtitle2)(class='col-12')
+      +text(texts.customization.text3)(class='col-12')
+
+
+      +title(texts.sources.title)(class='col-12')
+      +subtitle(texts.sources.subtitle)(class='col-12')
+      +text(texts.sources.text)(class='col-12')
+      +code-snippet({ code: snippets.sass[snippets.sass.length - 1], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +text(texts.sources.text2)(class='col-12')
+      +code-snippet({ code: snippets.sass[snippets.sass.length - 2], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      .text.col-12
+        ul.class-list
+          each variable in texts.sources.variables
+            li.class-list__item!= variable
+

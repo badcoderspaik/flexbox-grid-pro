@@ -90,6 +90,30 @@
           "phone-md",
           "phone-sm"
         ]
+      },
+      "customization": {
+        "title": "Кастомизация сетки",
+        "text" : "Наряду с готовым css-файлом библиотека доступна в виде исходных файлов Sass. При этом доступен как sass-, так и scss-синтаксис. При использовании Sass у вас есть возможность использовать набор готовых переменных и миксинов для кастомизации сетки и её гибкой настройки. Все предопределённые классы сетки используют те же переменные и миксины для предоставления целого набора готовых к использованию класоов для быстрого создания адаптивных макетов.",
+        "subtitle": "Переменные",
+        "text2": "Переменные и карты определяют ширину контейнера сетки и его внутренние горизонтальные отступы, количество столбцов и расстояние между ними по горизонтали и вертикали, контрольные точки для медиазапросов, а также части библиотеки, которые будут включены в сформированный css-файл. Они используются для генерации заданных классов сетки, а также для миксинов, использованных в примерах выше.",
+        "subtitle2": "Миксины",
+        "text3": "В директории <span class='inline-snippet'>grid/mixins/</span> содержатся миксины, которые используются вместе с переменными сетки для генерации css. Все генерируемые классы библиотеки используют эти же миксины."
+      },
+      "sources": {
+        "title": "Исходные файлы Sass",
+        "subtitle": "Сетка",
+        "text": "В файле <span class='inline-snippet'>grid/grid.scss</span> содержатся все переменные и настройки сетки, которые вы можете переопределить:",
+        "text2": "Для того чтобы переопределить переменные по умолчанию, задайте им свои значения перед импортом основного файла библиотеки <span class='inline-snippet'>grid/grid.scss</span>:",
+        "variables": [
+          "<span class='inline-snippet'>container-width</span>   - ширина контейнера",
+          "<span class='inline-snippet'>container-padding</span> - внутренние отступы контейнера",
+          "<span class='inline-snippet'>h-gutter</span>          - расстояние между колонками сетки по горизонтал",
+          "<span class='inline-snippet'>v-gutter</span>          - расстояние между колонками сетки по вертикали",
+          "<span class='inline-snippet'>columns</span>           - количество колонок сетки",
+          "<span class='inline-snippet'>mobile-first</span>      - булев флаг, указывающий, какой подход будет использован при формировании медиазапросов - mobile first или desktop first",
+          "<span class='inline-snippet'>media-query</span>       - переменная принимает одно из двух значений - min или max. Какое значение примет переменная, зависит от значения переменной mobile-first. Эта переменная служит для определения того, по какому принципу будут сформированы медиазапросы сетки - mobile first или desktop first.",
+          "<span class='inline-snippet'>grid-breakpoints</span>  - карта контрольных точек ( breakpoints ) сетки. По умолчанию доступно восемь контрольных точек. Карта используется миксинами системы, а также частями библиотеки <span class='inline-snippet'>grid/partials</span>, отвечающими за генерацию \"отзывчивых\" колоночных и иных классов. Например, исходя из имен ключей карты и их значений в собранном конечном css-файле библиотеки будут сгенерированы одни из следующих класоов и правил медиазапросов:"
+        ]
       }
     },
     "classTable": {
@@ -705,6 +729,30 @@
           "phone",
           "phone-md",
           "phone-sm"
+        ]
+      },
+      "customization": {
+        "title": "Customizing the grid",
+        "text": "Along with the finished css file, the library is available as Sass source files. Both sass and scss syntax are available. When using Sass, you can use a set of ready-made variables and mixins to customize the grid and its flexible settings. All predefined grid classes use the same variables and mixins to provide a whole set of ready-to-use classes for quickly creating adaptive layouts. ",
+        "subtitle": "Variables",
+        "text2": "Variables and maps determine the width of the grid container and its internal horizontal indents, the number of columns and the horizontal and vertical distance between them, control points for media queries, as well as parts of the library that will be included in the generated css file. They are used to generate the specified grid classes, as well as for the mixins used in the examples above. ",
+        "subtitle2": "Mixins",
+        "text3": "The directory <span class = 'inline-snippet'> grid/mixins/ </span> contains mixins that are used with mesh variables to generate css. All generated library classes use the same mixins."
+      },
+      "sources": {
+        "title": "Sass source files",
+        "subtitle": "Grid",
+        "text": "The file <span class = 'inline-snippet'> grid/grid.scss</span> contains all the variables and grid settings that you can override:",
+        "text2": "In order to override the default variables, give them your values before importing the main library file <span class = 'inline-snippet'>grid/grid.scss</span>:",
+        "variables": [
+          "<span class = 'inline-snippet'>container-width</span> - the width of the container",
+          "<span class = 'inline-snippet'>container-padding</span> - inner padding of the container",
+          "<span class = 'inline-snippet'>h-gutter</span> - horizontal distance between the grid columns",
+          "<span class = 'inline-snippet'>v-gutter</span> - the vertical distance between the grid columns",
+          "<span class = 'inline-snippet'>columns</span> - the number of grid columns",
+          "<span class = 'inline-snippet'>mobile-first</span> - a Boolean flag indicating which approach will be used when generating media queries - mobile first or desktop first",
+          "<span class = 'inline-snippet'>media-query</span> - the variable takes one of two values ​​- min or max. Which value the variable will take depends on the value of the variable mobile-first. This variable is used to determine by what principle will the grid’s media queries be formed - mobile first or desktop first. ",
+          "<span class = 'inline-snippet'>grid-breakpoints</span> - grid breakpoints map. By default, eight control points are available. The map is used by system mixins, as well as parts of the <span class = 'inline- library snippet '> grid/partials </span>, which are responsible for generating responsive column and other classes. For example, based on the names of the map keys and their values ​​in the assembled final css file of the library, one of the following classes and media query rules will be generated : "
         ]
       }
     },
