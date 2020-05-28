@@ -5,8 +5,7 @@ body
 
       +title(texts.intro.title)(class='col-12')
       +text(texts.intro.text)(class='col-12')
-      +code-snippet({ code: snippets.html[0] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[0] , title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(0)
       +text(texts.intro.text2)(class='col-12')
         +text-list(texts.intro.list)
       +text(texts.intro.text3)(class='col-12')
@@ -23,8 +22,7 @@ body
           .example__col.col col
           .example__col.col col
           .example__col.col col
-      +code-snippet({ code: snippets.html[1] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[1], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(1)
 
 
 
@@ -38,8 +36,7 @@ body
               .example__col(class=`col-${i}`) col-#{i}
               .example__col(class=`col-${j}`) col-#{j}
         - }
-      +code-snippet({ code: snippets.html[2] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[2], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(2)
 
 
 
@@ -64,8 +61,9 @@ body
           .example__col.col-2 col-2
           .example__col.col-2 col-2
           .example__col.col-2 col-2
-      +code-snippet({ code: snippets.html[3] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[3], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(3)
+
+
 
       +subtitle(texts.alignment.subtitle2)(class='col-12')
       .col-12
@@ -89,8 +87,9 @@ body
           .example__col.col-4.align-self-start col-4
           .example__col.col-4.align-self-center col-4
           .example__col.col-4.align-self-end col-4
-      +code-snippet({ code: snippets.html[4] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[4], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(4)
+
+
 
       +title(texts.direction.title)(class='col-12')
       +text(texts.direction.text)(class='col-12')
@@ -115,8 +114,9 @@ body
           .example__col.col-3 2
           .example__col.col-3 3
           .example__col.col-3 4
-      +code-snippet({ code: snippets.html[5] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[5], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(5)
+
+
 
       +title(texts.ordering.title)(class='col-12')
       +text(texts.ordering.text)(class='col-12')
@@ -128,8 +128,9 @@ body
           .example__col.col-2.order-3 4
           .example__col.col-2.order-6 5
           .example__col.col-2.order-5 6
-      +code-snippet({ code: snippets.html[6] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[6], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(6)
+
+
 
       +title(texts.offset.title)(class='col-12')
       +text(texts.offset.text)(class='col-12')
@@ -138,8 +139,9 @@ body
             .example.row.example_colored
               .example__col.col-1.no-v-gutters(class=`offset-right-${i}`) of-#{i}
         - }
-      +code-snippet({ code: snippets.html[7] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[7], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(7)
+
+
 
       +title(texts.show_hide.title)(class='col-12')
       +subtitle(texts.show_hide.subtitle1)(class='col-12')
@@ -150,8 +152,9 @@ body
           .example__col.col.hide-laptop-md 2
           .example__col.col 3
           .example__col.col.hide-laptop-md 4
-      +code-snippet({ code: snippets.html[8] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[8], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +code-snippets(8)
+
+
 
       +subtitle(texts.show_hide.subtitle2)(class='col-12')
       +text(texts.show_hide.text2)(class='col-12')
@@ -161,7 +164,105 @@ body
           .example__col.col.hide-laptop-md.show-tablet-landscape 2
           .example__col.col 3
           .example__col.col.hide-laptop-md.show-tablet-landscape 4
+      +code-snippets(9)
 
-      +code-snippet({ code: snippets.html[9] })(class='col col-phone-landscape-12')
-      +code-snippet({ code: snippets.sass[9], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+
+      +title(texts.resetMargins.title)(class='col-12')
+      +text(texts.resetMargins.text)(class='col-12')
+      .col-12
+        .example.example_colored.row.no-v-gutters
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+        .example.example_colored.row.no-v-gutters
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+        .example.example_colored.row
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippets(10)
+      +text(texts.resetMargins.text2)(class='col-12')
+      .col-12
+        .example.example_colored.row
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+        .example.example_colored.row.no-children-v-gutters
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippets(11)
+      +text(texts.resetMargins.text3)(class='col-12')
+      .col-12
+        .example.example_colored.row
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+        .example.example_colored.row.no-children-h-gutters
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippets(12)
+      +text(texts.resetMargins.text4)(class='col-12')
+      .col-12
+        .example.example_colored.row
+          .example__col.col.no-v-gutters col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippets(13)
+      +text(texts.resetMargins.text5)(class='col-12')
+      .col-12
+        .example.example_colored.row
+          .example__col.col.no-h-gutters col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippets(14)
+      +text(texts.resetMargins.text6)(class='col-12')
+      .col-12
+        .example.example_colored.row.no-children-gutters
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+          .example__col.col col
+      +code-snippets(15)
+
+
+      +title(texts.columnClasses.title)(class='col-12')
+      +text(texts.columnClasses.text)(class='col-12')
+        ul.class-list
+          - for (let i = 1; i < 13; i++) {
+              li.class-list__item
+                span.inline-snippet col-#{i}
+          - }
+
+
+      +title(texts.breakpoints.title)(class='col-12')
+      +text(texts.breakpoints.text)(class='col-12')
+      .col-12
+        table
+          tr
+            each title in texts.breakpoints.table.titles
+              th= title
+            each row in texts.breakpoints.table.rows
+              tr
+                each column in row
+                  td= column
+
+      +title(texts.responsiveColumnClasses.title)(class='col-12')
+      +text(texts.responsiveColumnClasses.text)(class='col-12')
+        ul.class-list
+          each breakpoint in texts.responsiveColumnClasses.breakpoints
+            li.class-list__item
+              span.inline-snippet col-#{breakpoint}-1 - col-#{breakpoint}-12
 

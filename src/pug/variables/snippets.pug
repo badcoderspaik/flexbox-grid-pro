@@ -256,6 +256,88 @@
       <div class="example__col col">3</div>
       <div class="example__col col hide-laptop-md show-tablet-landscape">4</div>
     </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row no-v-gutters">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+
+    <div class="example row no-v-gutters">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+
+    <div class="example row no-children-v-gutters">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+
+    <div class="example row no-children-h-gutters">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col no-v-gutters">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col no-h-gutters">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row no-children-gutters">
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+      <div class="example__col col">col</div>
+    </div>
   </div>`
   ],
 
@@ -704,6 +786,94 @@
         @include hide(laptop-md);
         @include show(tablet-landscape);
       }
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+    }
+
+    &:first-child,
+    &:nth-child(2) {
+      @include no-v-gutters();
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+    }
+
+    &:nth-child(2) {
+      @include no-children-v-gutters();
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+    }
+
+    &:nth-child(2) {
+      @include no-children-h-gutters();
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+
+      &:first-child {
+        @include no-v-gutters();
+      }
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+
+    &__col {
+      @include col();
+
+      &:first-child {
+        @include no-h-gutters();
+      }
+    }
+  }`,
+  `.container {
+    @include container();
+  }
+
+  .example {
+    @include row();
+    @include no-children-gutters();
+
+    &__col {
+      @include col();
     }
   }`
   ]
