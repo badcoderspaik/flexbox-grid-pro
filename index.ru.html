@@ -1371,6 +1371,88 @@
             <li class="class-list__item"><span class="inline-snippet">col-phone-sm-1 - col-phone-sm-12</span></li>
           </ul>
         </div>
+        <h3 class="title col-12">Кастомизация сетки</h3>
+        <div class="text col-12">Наряду с готовым css-файлом библиотека доступна в виде исходных файлов Sass. При этом доступен как sass-, так и scss-синтаксис. При использовании Sass у вас есть возможность использовать набор готовых переменных и миксинов для кастомизации сетки и её гибкой настройки. Все предопределённые классы сетки используют те же переменные и миксины для предоставления целого набора готовых к использованию класоов для быстрого создания адаптивных макетов.
+        </div>
+        <h4 class="subtitle col-12">Переменные</h4>
+        <div class="text col-12">Переменные и карты определяют ширину контейнера сетки и его внутренние горизонтальные отступы, количество столбцов и расстояние между ними по горизонтали и вертикали, контрольные точки для медиазапросов, а также части библиотеки, которые будут включены в сформированный css-файл. Они используются для генерации заданных классов сетки, а также для миксинов, использованных в примерах выше.
+        </div>
+        <h4 class="subtitle col-12">Миксины</h4>
+        <div class="text col-12">В директории <span class='inline-snippet'>grid/mixins/</span> содержатся миксины, которые используются вместе с переменными сетки для генерации css. Все генерируемые классы библиотеки используют эти же миксины.
+        </div>
+        <h3 class="title col-12">Исходные файлы Sass</h3>
+        <h4 class="subtitle col-12">Сетка</h4>
+        <div class="text col-12">В файле <span class='inline-snippet'>grid/grid.scss</span> содержатся все переменные и настройки сетки, которые вы можете переопределить:
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">$container-width: 1140px !default;
+$container-padding: 15px !default;
+$h-gutter: 30px !default;
+$v-gutter: $h-gutter !default;
+$columns: 12 !default;
+$mobile-first: false !default;
+
+@function query-direction() {
+  @if($mobile-first) {
+    @return min;
+  } @else {
+    @return max;
+  }
+}
+
+$media-query: query-direction();
+
+$grid-breakpoints: (
+  desktop: 1280px,
+  laptop: 1024px,
+  laptop-md: 960px,
+  tablet-landscape: 768px,
+  phone-landscape: 640px,
+  phone: 480px,
+  phone-md: 360px,
+  phone-sm: 320px
+) !default;
+
+$partials: (
+  alignment,
+  direction,
+  hide,
+  offset,
+  ordering,
+  show,
+  gutters
+) !default;
+
+@import 'mixins/mixins';
+@import 'partials/alignment';
+@import 'partials/ordering';
+@import 'partials/direction';
+@import 'partials/hide';
+@import 'partials/show';
+@import 'partials/offset';
+@import 'partials/gutters.scss';
+@import 'base';</code></pre>
+        </div>
+        <div class="text col-12">Для того чтобы переопределить переменные по умолчанию, задайте им свои значения перед импортом основного файла библиотеки <span class='inline-snippet'>grid/grid.scss</span>:
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">$container-width: 1920px;
+$container-padding: 10px;
+$h-gutter: 15px;
+$columns: 24;
+$mobile-first: true;
+
+$grid-breakpoints: (
+  lg: 1280px,
+  md: 960px,
+  sm: 768px,
+  xs: 480px
+);
+
+@import 'path/to/grid/grid.scss'</code></pre>
+        </div>
       </main>
     </div>
   </body>
