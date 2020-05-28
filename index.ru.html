@@ -1453,6 +1453,18 @@ $grid-breakpoints: (
 
 @import 'path/to/grid/grid.scss'</code></pre>
         </div>
+        <div class="text col-12">
+          <ul class="class-list">
+            <li class="class-list__item"><span class='inline-snippet'>container-width</span>   - ширина контейнера сетки</li>
+            <li class="class-list__item"><span class='inline-snippet'>container-padding</span> - внутренние отступы контейнера</li>
+            <li class="class-list__item"><span class='inline-snippet'>h-gutter</span>          - расстояние между колонками сетки по горизонтал</li>
+            <li class="class-list__item"><span class='inline-snippet'>v-gutter</span>          - расстояние между колонками сетки по вертикали</li>
+            <li class="class-list__item"><span class='inline-snippet'>columns</span>           - количество колонок сетки</li>
+            <li class="class-list__item"><span class='inline-snippet'>mobile-first</span>      - булев флаг, указывающий, какой подход будет использован при формировании медиазапросов - mobile first или desktop first</li>
+            <li class="class-list__item"><span class='inline-snippet'>media-query</span>       - переменная принимает одно из двух значений - min или max. Какое значение примет переменная, зависит от значения переменной mobile-first. Эта переменная служит для определения того, по какому принципу будут сформированы медиазапросы сетки - mobile first или desktop first.</li>
+            <li class="class-list__item"><span class='inline-snippet'>grid-breakpoints</span>  - карта контрольных точек ( breakpoints ) сетки. По умолчанию доступно восемь контрольных точек. Карта используется миксинами системы, а также частями библиотеки <span class='inline-snippet'>grid/partials</span>, отвечающими за генерацию "отзывчивых" колоночных и иных классов. Например, исходя из имен ключей карты и их значений в собранном конечном css-файле библиотеки будут сгенерированы одни из следующих класоов и правил медиазапросов:</li>
+          </ul>
+        </div>
       </main>
     </div>
   </body>
