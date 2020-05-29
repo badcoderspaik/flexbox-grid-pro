@@ -338,6 +338,32 @@
       <div class="example__col col">col</div>
       <div class="example__col col">col</div>
     </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col-2 col-laptop-3 col-laptop-md-4 col-tablet-landscape-6 col-phone-landscape-12">1</div>
+      <div class="example__col col-2 col-laptop-3 col-laptop-md-4 col-tablet-landscape-6 col-phone-landscape-12">2</div>
+      <div class="example__col col-2 col-laptop-3 col-laptop-md-4 col-tablet-landscape-6 col-phone-landscape-12">3</div>
+      <div class="example__col col-2 col-laptop-3 col-laptop-md-4 col-tablet-landscape-6 col-phone-landscape-12">4</div>
+      <div class="example__col col-2 col-laptop-3 col-laptop-md-4 col-tablet-landscape-6 col-phone-landscape-12">5</div>
+      <div class="example__col col-2 col-laptop-3 col-laptop-md-4 col-tablet-landscape-6 col-phone-landscape-12">6</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row justify-content-laptop-center justify-content-laptop-md-end justify-content-tablet-landscape-between justify-content-phone-landscape-around">
+      <div class="example__col col-2">1</div>
+      <div class="example__col col-2">2</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row align-items-start align-items-laptop-center align-items-laptop-md-end align-items-tablet-landscape-stretch align-items-phone-landscape-baseline">
+      <div class="example__col col">1</div>
+      <div class="example__col col">2</div>
+      <div class="example__col col">3</div>
+    </div>
   </div>`
   ],
 
@@ -659,6 +685,7 @@
       }
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -769,6 +796,7 @@
       }
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -788,6 +816,7 @@
       }
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -804,6 +833,7 @@
       @include no-v-gutters();
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -819,6 +849,7 @@
       @include no-children-v-gutters();
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -834,6 +865,7 @@
       @include no-children-h-gutters();
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -849,6 +881,7 @@
       }
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -864,6 +897,7 @@
       }
     }
   }`,
+
   `.container {
     @include container();
   }
@@ -874,6 +908,55 @@
 
     &__col {
       @include col();
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+
+      &__col {
+        @include col(2);
+        @include col(3, laptop);
+        @include col(4, laptop-md);
+        @include col(6, tablet-landscape);
+        @include col(12, phone-landscape);
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+      @include justify-content(center, laptop);
+      @include justify-content(flex-end, laptop-md);
+      @include justify-content(space-between, tablet-landscape);
+      @include justify-content(space-around, phone-landscape);
+
+      &__col {
+        @include col(2);
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+      @include align-items(flex-start);
+      @include align-items(center, laptop);
+      @include align-items(flex-end, laptop-md);
+      @include align-items(stretch, tablet-landscape);
+      @include align-items(baseline, phone-landscape);
+
+      &__col {
+        @include col();
+      }
     }
   }`,
 

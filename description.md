@@ -147,7 +147,7 @@ scss-синтаксис. При использовании Sass у вас ест
 Например, исходя из имен ключей карты и их значений в собранном конечном css-файле библиотеки будут сгенерированы одни из 
 следующих класоов и правил медиазапросов:
 
-  - количество колонок в строке при той или иной ширине вьюпорта - <span class='inline-snippet'>col-desktop-5</span>,
+  - Количество колонок в строке при той или иной ширине вьюпорта - <span class='inline-snippet'>col-desktop-5</span>,
   <span class='inline-snippet'>col-laptop-2</span>, <span class='inline-snippet'>col-tablet-landscape-3</span>, 
   <span class='inline-snippet'>col-phone-md-12</span> и т.д.
   

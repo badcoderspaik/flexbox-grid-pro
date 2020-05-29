@@ -286,3 +286,32 @@ body
           each variable in texts.sources.variables
             li.class-list__item!= variable
 
+      +subtitle(texts.sources.subtitle2)(class='col-12')
+      +text(texts.sources.text3)(class='col-12')
+      .text.col-12
+        +responsive-list
+          +responsive-list-item(texts.sources.responsiveList[0])
+            .example.row
+              .example__col.col-2.col-laptop-3.col-laptop-md-4.col-tablet-landscape-6.col-phone-landscape-12 1
+              .example__col.col-2.col-laptop-3.col-laptop-md-4.col-tablet-landscape-6.col-phone-landscape-12 2
+              .example__col.col-2.col-laptop-3.col-laptop-md-4.col-tablet-landscape-6.col-phone-landscape-12 3
+              .example__col.col-2.col-laptop-3.col-laptop-md-4.col-tablet-landscape-6.col-phone-landscape-12 4
+              .example__col.col-2.col-laptop-3.col-laptop-md-4.col-tablet-landscape-6.col-phone-landscape-12 5
+              .example__col.col-2.col-laptop-3.col-laptop-md-4.col-tablet-landscape-6.col-phone-landscape-12 6
+            .row
+              +code-snippets(16)
+
+          +responsive-list-item(texts.sources.responsiveList[1])
+            .example.example_colored.row.justify-content-laptop-center.justify-content-laptop-md-end.justify-content-tablet-landscape-between.justify-content-phone-landscape-around
+              .example__col.col-2 1
+              .example__col.col-2 2
+            .row
+              +code-snippets(17)
+
+          +responsive-list-item(texts.sources.responsiveList[2])
+            .example.example_colored.example_fixed-size.row.no-children-v-gutters.align-items-start.align-items-laptop-center.align-items-laptop-md-end.align-items-tablet-landscape-stretch.align-items-phone-landscape-baseline
+              .example__col.col 1
+              .example__col.col 2
+              .example__col.col 3
+            .row
+              +code-snippets(18)
