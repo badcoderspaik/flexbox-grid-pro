@@ -1589,6 +1589,163 @@ $grid-breakpoints: (
                 </div>
               </div>
             </li>
+            <li class="responsive-list__item">
+              <p class="responsive-list__text">Вертикальное выравнивание отдельно взятой колонки в строке при различной ширине вьюпорта: <span class='inline-snippet'>align-self-desktop-start</span>, <span class='inline-snippet'>align-self-desktop-center</span>, <span class='inline-snippet'>align-self-laptop-end</span>, <span class='inline-snippet'>align-self-tablet-landscape-stretch</span>, <span class='inline-snippet'>align-self-phone-baseline</span> и т.д.:</p>
+              <div class="example example_colored example_fixed-size row no-children-v-gutters align-items-start">
+                <div class="example__col col align-self-laptop-center align-self-laptop-md-end align-self-tablet-landscape-stretch align-self-phone-landscape-baseline">1</div>
+                <div class="example__col col">2</div>
+                <div class="example__col col">3</div>
+              </div>
+              <div class="row">
+                <div class="code-snippet col col-phone-landscape-12">
+                  <h3 class="code-snippet__title">HTML</h3>
+                  <pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row align-items-start&quot;&gt;
+    &lt;div class=&quot;example__col col align-self-laptop-center align-self-laptop-md-end align-self-tablet-landscape-stretch align-self-phone-landscape-baseline&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-snippet col">
+                  <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+                  <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+    @include align-items(flex-start);
+
+    &amp;__col {
+      @include col();
+
+      &amp;:first-child {
+        @include align-self(center, laptop);
+        @include align-self(end, laptop-md);
+        @include align-self(stretch, tablet-landscape);
+        @include align-self(baseline, phone-landscape);
+      }
+    }
+  }
+}</code></pre>
+                </div>
+              </div>
+            </li>
+            <li class="responsive-list__item">
+              <p class="responsive-list__text">Направление расположения колонок в строке при различной ширине вьюпорта: <span class='inline-snippet'>direction-desktop-column</span>, <span class='inline-snippet'>direction-desktop-row-reverse</span>, <span class='inline-snippet'>direction-laptop-column</span>, <span class='inline-snippet'>direction-laptop-row-reverse</span> и т.д.:</p>
+              <div class="example example_colored row align-items-start align-items-laptop-md-stretch direction-laptop-row-reverse direction-laptop-md-column direction-tablet-landscape-column-reverse">
+                <div class="example__col col">1</div>
+                <div class="example__col col">2</div>
+                <div class="example__col col">3</div>
+              </div>
+              <div class="row">
+                <div class="code-snippet col col-phone-landscape-12">
+                  <h3 class="code-snippet__title">HTML</h3>
+                  <pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row align-items-start align-items-laptop-md-stretch direction-laptop-row-reverse direction-laptop-md-column direction-tablet-landscape-column-reverse&quot;&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-snippet col">
+                  <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+                  <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+    @include align-items(flex-start);
+    @include align-items(stretch, laptop-md);
+    @include direction(row-reverse, laptop);
+    @include direction(column, laptop-md);
+    @include direction(column-reverse, tablet-landscape);
+
+    &amp;__col {
+      @include col();
+
+      &amp;:first-child {
+        @include align-self(center, laptop);
+        @include align-self(end, laptop-md);
+        @include align-self(stretch, tablet-landscape);
+        @include align-self(baseline, phone-landscape);
+      }
+    }
+  }
+}</code></pre>
+                </div>
+              </div>
+            </li>
+            <li class="responsive-list__item">
+              <p class="responsive-list__text">Смещение колонок в строке при различной ширине вьюпорта: <span class='inline-snippet'>offset-desktop-right-2</span>, <span class='inline-snippet'>offset-laptop-left-4</span>, <span class='inline-snippet'>offset-tablet-landscape-left-9</span>, <span class='inline-snippet'>offset-phone-left-11</span> и т.д.:</p>
+              <div class="example example_colored row no-children-v-gutters">
+                <div class="example__col col-2 offset-laptop-right-2 offset-laptop-md-right-4 offset-tablet-landscape-right-6 offset-phone-landscape-right-auto">1</div>
+              </div>
+              <div class="example example_colored row no-children-v-gutters">
+                <div class="example__col col-2 offset-laptop-md-right-auto">2</div>
+              </div>
+              <div class="example example_colored row no-children-v-gutters">
+                <div class="example__col col-2 offset-right-auto offset-desktop-left-auto">3</div>
+              </div>
+              <div class="row">
+                <div class="code-snippet col col-phone-landscape-12">
+                  <h3 class="code-snippet__title">HTML</h3>
+                  <pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-2 offset-laptop-right-2 offset-laptop-md-right-4 offset-tablet-landscape-right-6 offset-phone-landscape-right-auto&quot;&gt;1&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-2 offset-laptop-md-right-auto&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col-2 offset-right-auto offset-desktop-left-auto&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-snippet col">
+                  <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+                  <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+
+    &amp;:first-child {
+
+      .example__col {
+        @include offset(right, 2, laptop);
+        @include offset(right, 4, laptop-md);
+        @include offset(right, 6, tablet-landscape);
+        @include offset(right, auto, phone-landscape);
+      }
+    }
+
+    &amp;:nth-child(2) {
+
+      .example__col {
+        @include offset(right, auto, laptop-md);
+      }
+    }
+
+    &amp;:nth-child(3) {
+
+      .example__col {
+        @include offset(right, auto);
+        @include offset(left, auto, desktop);
+      }
+    }
+
+    &amp;__col {
+      @include col(2);
+    }
+  }
+}</code></pre>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </main>
