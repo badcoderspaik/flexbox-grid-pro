@@ -3,6 +3,10 @@
   padding: 0;
   list-style: none;
 
+  &__item {
+    margin-bottom: pxToRem(30);
+  }
+
   &__text {
     margin-top: 0;
   }

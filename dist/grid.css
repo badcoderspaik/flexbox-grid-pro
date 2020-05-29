@@ -180,10 +180,12 @@
   margin-right: calc(100% / 12 * 12 + 30px / 2)!important
 }
 .offset-right-auto {
-  margin-left: auto!important
+  margin-left: auto!important;
+  margin-right: 15px!important
 }
 .offset-left-auto {
-  margin-right: auto!important
+  margin-right: auto!important;
+  margin-left: 15px!important
 }
 .no-gutters {
   margin: 0!important
@@ -502,10 +504,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-desktop-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-desktop-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-desktop {
     margin: 0!important
@@ -762,10 +766,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-laptop-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-laptop-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-laptop {
     margin: 0!important
@@ -1022,10 +1028,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-laptop-md-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-laptop-md-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-laptop-md {
     margin: 0!important
@@ -1282,10 +1290,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-tablet-landscape-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-tablet-landscape-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-tablet-landscape {
     margin: 0!important
@@ -1542,10 +1552,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-phone-landscape-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-phone-landscape-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-phone-landscape {
     margin: 0!important
@@ -1802,10 +1814,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-phone-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-phone-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-phone {
     margin: 0!important
@@ -2062,10 +2076,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-phone-md-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-phone-md-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-phone-md {
     margin: 0!important
@@ -2322,10 +2338,12 @@
     margin-right: calc(100% / 12 * 12 + 30px / 2)!important
   }
   .offset-phone-sm-right-auto {
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-right: 15px!important
   }
   .offset-phone-sm-left-auto {
-    margin-right: auto!important
+    margin-right: auto!important;
+    margin-left: 15px!important
   }
   .no-gutters-phone-sm {
     margin: 0!important

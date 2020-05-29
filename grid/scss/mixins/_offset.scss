@@ -12,10 +12,13 @@
       @if ($offset == auto) {
         @if ($direction == right) {
           margin-left: auto !important;
+          margin-right: $h-gutter / 2 !important;
         } @else if ($direction == left) {
           margin-right: auto !important;
+          margin-left: $h-gutter / 2 !important;
         } @else {
           margin-left: auto !important;
+          margin-right: $h-gutter / 2 !important;
         }
       } @else if (type_of($offset) == number) {
         @if ($offset > $columns) {
@@ -37,10 +40,13 @@
     @if ($offset == auto) {
       @if ($direction == right) {
         margin-left: auto !important;
+        margin-right: $h-gutter / 2 !important;
       } @else if ($direction == left) {
         margin-right: auto !important;
+        margin-left: $h-gutter / 2 !important;
       } @else {
         margin-left: auto !important;
+        margin-right: $h-gutter / 2 !important;
       }
     } @else if (type_of($offset == number)) {
       @if ($offset > $columns) {

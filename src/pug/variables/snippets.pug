@@ -364,6 +364,36 @@
       <div class="example__col col">2</div>
       <div class="example__col col">3</div>
     </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row align-items-start">
+      <div class="example__col col align-self-laptop-center align-self-laptop-md-end align-self-tablet-landscape-stretch align-self-phone-landscape-baseline">1</div>
+      <div class="example__col col">2</div>
+      <div class="example__col col">3</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row align-items-start align-items-laptop-md-stretch direction-laptop-row-reverse direction-laptop-md-column direction-tablet-landscape-column-reverse">
+      <div class="example__col col">1</div>
+      <div class="example__col col">2</div>
+      <div class="example__col col">3</div>
+    </div>
+  </div>`,
+
+  `<div class="container">
+    <div class="example row">
+      <div class="example__col col-2 offset-laptop-right-2 offset-laptop-md-right-4 offset-tablet-landscape-right-6 offset-phone-landscape-right-auto">1</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-2 offset-laptop-md-right-auto">2</div>
+    </div>
+
+    <div class="example row">
+      <div class="example__col col-2 offset-right-auto offset-desktop-left-auto">3</div>
+    </div>
   </div>`
   ],
 
@@ -956,6 +986,87 @@
 
       &__col {
         @include col();
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+      @include align-items(flex-start);
+
+      &__col {
+        @include col();
+
+        &:first-child {
+          @include align-self(center, laptop);
+          @include align-self(end, laptop-md);
+          @include align-self(stretch, tablet-landscape);
+          @include align-self(baseline, phone-landscape);
+        }
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+      @include align-items(flex-start);
+      @include align-items(stretch, laptop-md);
+      @include direction(row-reverse, laptop);
+      @include direction(column, laptop-md);
+      @include direction(column-reverse, tablet-landscape);
+
+      &__col {
+        @include col();
+
+        &:first-child {
+          @include align-self(center, laptop);
+          @include align-self(end, laptop-md);
+          @include align-self(stretch, tablet-landscape);
+          @include align-self(baseline, phone-landscape);
+        }
+      }
+    }
+  }`,
+
+  `.container {
+    @include container();
+
+    .example {
+      @include row();
+
+      &:first-child {
+
+        .example__col {
+          @include offset(right, 2, laptop);
+          @include offset(right, 4, laptop-md);
+          @include offset(right, 6, tablet-landscape);
+          @include offset(right, auto, phone-landscape);
+        }
+      }
+
+      &:nth-child(2) {
+
+        .example__col {
+          @include offset(right, auto, laptop-md);
+        }
+      }
+
+      &:nth-child(3) {
+
+        .example__col {
+          @include offset(right, auto);
+          @include offset(left, auto, desktop);
+        }
+      }
+
+      &__col {
+        @include col(2);
       }
     }
   }`,
