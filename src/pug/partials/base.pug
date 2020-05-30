@@ -342,3 +342,58 @@ body
               .example__col.col-2.offset-right-auto.offset-desktop-left-auto 3
             .row
               +code-snippets(21)
+
+          +responsive-list-item(texts.sources.responsiveList[6])
+            .example.row
+              .example__col.col.order-laptop-2 1
+              .example__col.col.order-laptop-1 2
+              .example__col.col.order-laptop-4 3
+              .example__col.col.order-laptop-3 4
+            .example.row
+              .example__col.col.order-laptop-last 1
+              .example__col.col 2
+              .example__col.col 3
+              .example__col.col.order-laptop-first 4
+            .row
+              +code-snippets(22)
+
+
+            +responsive-list-item(texts.sources.responsiveList[7])
+              .example.row
+                .example__col.col.hide-laptop 1
+                .example__col.col 2
+              .example.row
+                .example__col.col 3
+                .example__col.col.hide.show-laptop 4
+              .row
+                +code-snippets(23)
+
+            +responsive-list-item(texts.sources.responsiveList[8])
+              +code-snippet({ code: snippets.sass[snippets.sass.length - 3], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+            +text(texts.sources.text4)(class='col-12')
+
+
+      +title(texts.sources.title2)(class='col-12')
+      +text(texts.sources.text5)(class='col-12')
+      +code-snippet({ code: snippets.sass[snippets.sass.length - 4], title: 'Sass ( Scss syntax )', classes: 'scss' })(class='col')
+      +text(texts.sources.text6)(class='col-12')
+
+      +subtitle(texts.sources.subtitle3)(class='col-12')
+      +text(texts.sources.text7)(class='col-12')
+      +subtitle(texts.sources.subtitle4)(class='col-12')
+      +text(texts.sources.text8)(class='col-12')
+      +subtitle(texts.sources.subtitle5)(class='col-12')
+      +text(texts.sources.text9)(class='col-12')
+      +subtitle(texts.sources.subtitle6)(class='col-12')
+      +text(texts.sources.text10)(class='col-12')
+      +subtitle(texts.sources.subtitle7)(class='col-12')
+      +text(texts.sources.text11)(class='col-12')
+      +subtitle(texts.sources.subtitle8)(class='col-12')
+      +text(texts.sources.text12)(class='col-12')
+      +subtitle(texts.sources.subtitle9)(class='col-12')
+      +text(texts.sources.text13)(class='col-12')
+      +subtitle(texts.sources.subtitle10)(class='col-12')
+      +text(texts.sources.text14)(class='col-12')
+
+      +title(texts.compilation.title)(class='col-12')
+      +text(texts.compilation.text)(class='col-12')

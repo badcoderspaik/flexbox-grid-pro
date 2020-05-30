@@ -1463,6 +1463,7 @@ $grid-breakpoints: (
             <li class="class-list__item"><span class='inline-snippet'>mobile-first</span>      - булев флаг, указывающий, какой подход будет использован при формировании медиазапросов - mobile first или desktop first</li>
             <li class="class-list__item"><span class='inline-snippet'>media-query</span>       - переменная принимает одно из двух значений - min или max. Какое значение примет переменная, зависит от значения переменной mobile-first. Эта переменная служит для определения того, по какому принципу будут сформированы медиазапросы сетки - mobile first или desktop first.</li>
             <li class="class-list__item"><span class='inline-snippet'>grid-breakpoints</span>  - карта контрольных точек ( breakpoints ) сетки. По умолчанию доступно восемь контрольных точек. Карта используется миксинами системы, а также частями библиотеки <span class='inline-snippet'>grid/partials</span>, отвечающими за генерацию "отзывчивых" колоночных и иных классов. Например, исходя из имен ключей карты и их значений в собранном конечном css-файле библиотеки будут сгенерированы классы и медиазапросы для них, как показано ниже.</li>
+            <li class="class-list__item"><span class='inline-snippet'>partials</span>  - список частей библиотеки, отвечающих за генерацию определенных разделов html-классов. Чтобы уменьшить размер конечного css-файла библиотеки, вы можете присвоить этой переменной значение false перед импортом основного файла библиотеки. Это предотвратит генерацию большого количества предопределенных классов.</li>
           </ul>
         </div>
         <h4 class="subtitle col-12">&quot;Отзывчивые&quot; классы на основе карты контрольных точек</h4>
@@ -1746,7 +1747,191 @@ $grid-breakpoints: (
                 </div>
               </div>
             </li>
+            <li class="responsive-list__item">
+              <p class="responsive-list__text">Изменение порядка колонок в строке: <span class='inline-snippet'>order-desktop-1</span>, <span class='inline-snippet'>order-laptop-3</span>, <span class='inline-snippet'>order-laptop-md-5</span>, <span class='inline-snippet'>order-phone-first</span>, <span class='inline-snippet'>order-phone-sm-last</span> и т.д.:</p>
+              <div class="example row">
+                <div class="example__col col order-laptop-2">1</div>
+                <div class="example__col col order-laptop-1">2</div>
+                <div class="example__col col order-laptop-4">3</div>
+                <div class="example__col col order-laptop-3">4</div>
+              </div>
+              <div class="example row">
+                <div class="example__col col order-laptop-last">1</div>
+                <div class="example__col col">2</div>
+                <div class="example__col col">3</div>
+                <div class="example__col col order-laptop-first">4</div>
+              </div>
+              <div class="row">
+                <div class="code-snippet col col-phone-landscape-12">
+                  <h3 class="code-snippet__title">HTML</h3>
+                  <pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col order-laptop-2&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col order-laptop-1&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col order-laptop-4&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col order-laptop-3&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col order-laptop-last&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col order-laptop-first&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-snippet col">
+                  <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+                  <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+
+    &amp;:first-child {
+
+      .example__col:first-child {
+        @include order(2, laptop);
+      }
+
+      .example__col:nth-child(2) {
+        @include order(1, laptop);
+      }
+
+      .example__col:nth-child(3) {
+        @include order(4, laptop);
+      }
+
+      .example__col:last-child {
+        @include order(3, laptop);
+      }
+    }
+
+    &amp;:last-child {
+
+      .example__col:first-child {
+        @include order(last, laptop);
+      }
+
+      .example__col:last-child {
+        @include order(first, laptop);
+      }
+    }
+
+    &amp;__col {
+      @include col();
+    }
+  }
+}</code></pre>
+                </div>
+              </div>
+              <li class="responsive-list__item">
+                <p class="responsive-list__text">Скрытие и отображение элементов сетки при различной ширине вьюпорта: <span class='inline-snippet'>hide-desktop</span>, <span class='inline-snippet'>hide-laptop</span>, <span class='inline-snippet'>hide-tablet-landscape</span>, <span class='inline-snippet'>hide-phone-sm</span>, <span class='inline-snippet'>show-desktop</span>, <span class='inline-snippet'>show-laptop</span>, <span class='inline-snippet'>show-tablet-landscape</span> и т.д.:</p>
+                <div class="example row">
+                  <div class="example__col col hide-laptop">1</div>
+                  <div class="example__col col">2</div>
+                </div>
+                <div class="example row">
+                  <div class="example__col col">3</div>
+                  <div class="example__col col hide show-laptop">4</div>
+                </div>
+                <div class="row">
+                  <div class="code-snippet col col-phone-landscape-12">
+                    <h3 class="code-snippet__title">HTML</h3>
+                    <pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col hide-laptop&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;example row&quot;&gt;
+    &lt;div class=&quot;example__col col&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;example__col col hide show-laptop&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-snippet col">
+                    <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+                    <pre><code class="scss">.container {
+  @include container();
+
+  .example {
+    @include row();
+
+    &amp;:first-child {
+
+      .example__col:first-child {
+        @include hide(laptop);
+      }
+    }
+
+    &amp;:last-child {
+
+      .example__col:last-child {
+        @include show(laptop);
+      }
+    }
+
+    &amp;__col {
+      @include col();
+    }
+  }
+}</code></pre>
+                  </div>
+                </div>
+              </li>
+              <li class="responsive-list__item">
+                <p class="responsive-list__text">Также, как и другие переменные по умолчанию, вы можете переопределить значение переменной <span class='inline-snippet'>$grid-breakpoints</span>, задав для контрольных точек более традиционные названия и размеры вьюпорта:</p>
+                <div class="code-snippet col">
+                  <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+                  <pre><code class="scss">$grid-breakpoints: (
+  lg: 1280px,
+  md: 960px,
+  sm: 768px,
+  xs: 480px
+);</code></pre>
+                </div>
+              </li>
+              <div class="text col-12">Это сгенерирует классы вида <span class='inline-snippet'>col-lg-12</span>, <span class='inline-snippet'>col-md-4</span>, <span class='inline-snippet'>justify-content-sm-center</span>, <span class='inline-snippet'>offset-xs-2</span>, <span class='inline-snippet'>order-lg-9</span>, <span class='inline-snippet'>direction-sm-column</span>, <span class='inline-snippet'>hide-sm</span>, <span class='inline-snippet'>show-xs</span> и т.д.
+              </div>
+            </li>
           </ul>
+        </div>
+        <h3 class="title col-12">Части</h3>
+        <div class="text col-12">Директория <span class='inline-snippet'>partials</span> содержит список частей библиотеки, отвечающих за генерацию категорий классов и медиазапросов. С целью уменьшения сформированного css-файла библиотеки вы можете переопределить список, оставив лишь те элементы, названия которых соответствуют тем частям библиотеки, классы которых вы будете использовать. Ниже ещё будет сказано, какие части за что отвечают. Либо же, если вместо расстановки классов на элементах в разметке для построения сетки вы предпочитаете использовать Sass и предопределенные миксины, вы можете присвоить переменной <span class='inline-snippet'>partials</span> значение <span class='inline-script'>false</span> ( не <span class='inline-script'>null</span> ) или любое другое "не null" значение.
+        </div>
+        <div class="code-snippet col">
+          <h3 class="code-snippet__title">Sass ( Scss syntax )</h3>
+          <pre><code class="scss">$partials: false;</code></pre>
+        </div>
+        <div class="text col-12">Это предотвратит генерацию большого количества готовых классов, что позволит значительно уменьшить размер конечного css-файла библиотеки.
+        </div>
+        <h4 class="subtitle col-12">Выравнивание</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/alignment.scss</span> содержит код, генерирующий классы, отвечающие за выравнивание колонок внутри строки.
+        </div>
+        <h4 class="subtitle col-12">Направление расположения колонок в строке</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/direction.scss</span> содержит код, генерирующий классы, отвечающие за направление главной оси, вдоль которой выстраиваются столбцы внутри строки.
+        </div>
+        <h4 class="subtitle col-12">Упорядочивание колонок</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/ordering.scss</span> содержит код, генерирующий классы, отвечающие за порядок расположения колонок внутри строки.
+        </div>
+        <h4 class="subtitle col-12">Смещение колонок</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/offset.scss</span> содержит код, генерирующий классы, отвечающие за смещение колонок внутри строки.
+        </div>
+        <h4 class="subtitle col-12">Скрытие элементов</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/hide.scss</span> содержит код, генерирующий классы, отвечающие за скрытие элементов.
+        </div>
+        <h4 class="subtitle col-12">Отображение элементов</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/visible.scss</span> содержит код, генерирующий классы, отвечающие за отображение элементов.
+        </div>
+        <h4 class="subtitle col-12">Обнуление внешних отступов у элементов строк и колонок</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/gutters.scss</span> содержит код, генерирующий классы, отвечающие за обнуление внешних отступов у элементов строк и колонок.
+        </div>
+        <h4 class="subtitle col-12">Базовая инициализация сетки</h4>
+        <div class="text col-12">Файл <span class='inline-snippet'>grid/base.scss</span> содержит код, генерирующий базовые классы сетки.
+        </div>
+        <h3 class="title col-12">Компиляция исходных sass-файлов</h3>
+        <div class="text col-12">При использовании библиотеки flexbox-grid-pro в виде sass-файлов, настоятельно рекомендуется использовать минификаторы <a href='https://github.com/Se7enSky/group-css-media-queries'>group-css-media-queries</a> и <a href='https://github.com/css/csso'>csso</a>. Это значительно сократит объём собранного css-файла библиотеки.
         </div>
       </main>
     </div>
