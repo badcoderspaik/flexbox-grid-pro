@@ -23,7 +23,7 @@
       </div>
     </header>
     <div class="container">
-      <main class="page-main row">
+      <main class="page-main row"><a id="intro"></a>
         <h3 class="title col-12">Introduction</h3>
         <div class="text col-12">Flexbox Grid Pro is a rich modular grid system for creating adaptive, responsive layouts. The grid is available in two versions - as a set of predefined css classes and as a set of sass mixins. That is, you can either put necessary classes in the html markup to the necessary elements or connect the necessary mixins in your sass code in the selectors, as shown below. Both options are equivalent and give similar results. Which one to use is just a matter of your preference:
         </div>
@@ -139,7 +139,7 @@
 .col {
   @include col();
 }</code></pre>
-        </div>
+        </div><a id="different-width-cols"></a>
         <h3 class="title col-12">Columns of the specified width</h3>
         <div class="text col">By default, the grid consists of twelve columns. Just set the element to the required class or connect the desired mixin in the selector:
         </div>
@@ -392,10 +392,10 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Alignment</h3>
         <div class="text col-12">For horizontal and vertical alignment of columns use the necessary classes or mixins.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Horizontal</h4>
         <div class="col-12">
           <div class="example example_colored row justify-content-start no-children-v-gutters">
@@ -485,7 +485,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Vertical</h4>
         <div class="col-12">
           <div class="example example_colored row example_fixed-size no-children-v-gutters align-items-start">
@@ -592,7 +592,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Направление расположения главной оси</h3>
         <div class="text col-12">Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:
         </div>
@@ -679,7 +679,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Column order</h3>
         <div class="text col-12">To specify the order of the columns in the row, use the necessary classes or mixins:
         </div>
@@ -743,7 +743,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Column offset</h3>
         <div class="text col-12">Use column classes or mixins to offset columns:
         </div>
@@ -923,8 +923,8 @@
     }
   }
 }</code></pre>
-        </div>
-        <h3 class="title col-12">Hide and show items</h3>
+        </div><a id=""></a>
+        <h3 class="title col-12">Hide and show items</h3><a id=""></a>
         <h4 class="subtitle col-12">Hide</h4>
         <div class="text col-12">To hide the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less:
         </div>
@@ -967,7 +967,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Display</h4>
         <div class="text col-12">To display the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less, but will be displayed again with a viewport width of 768px:
         </div>
@@ -1011,7 +1011,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Zeroing indentation of row and column elements</h3>
         <div class="text col-12">To nullify the indentation of row and column elements, use the classes or mixins intended for this. In the example below, the vertical indentation of the first two elements of the lines is reset:
         </div>
@@ -1296,7 +1296,7 @@
     @include col();
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Column classes</h3>
         <div class="text col-12">By default, the grid consists of twelve columns and accordingly contains twelve "column" classes:
           <ul class="class-list">
@@ -1313,7 +1313,7 @@
             <li class="class-list__item"><span class="inline-snippet">col-11</span></li>
             <li class="class-list__item"><span class="inline-snippet">col-12</span></li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Breakpointns</h3>
         <div class="text col-12">By default, the system uses eight predefined desktop-first style control points:
         </div>
@@ -1356,7 +1356,7 @@
               </tr>
             </tr>
           </table>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Responsive column classes</h3>
         <div class="text col-12">Based on a predetermined number of columns and control point names used in the grid (by default), the system includes a set of responsive column classes:
           <ul class="class-list">
@@ -1369,17 +1369,17 @@
             <li class="class-list__item"><span class="inline-snippet">col-phone-md-1 - col-phone-md-12</span></li>
             <li class="class-list__item"><span class="inline-snippet">col-phone-sm-1 - col-phone-sm-12</span></li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Customizing the grid</h3>
         <div class="text col-12">Along with the finished css file, the library is available as Sass source files. Both sass and scss syntax are available. When using Sass, you can use a set of ready-made variables and mixins to customize the grid and its flexible settings. All predefined grid classes use the same variables and mixins to provide a whole set of ready-to-use classes for quickly creating adaptive layouts. 
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Variables</h4>
         <div class="text col-12">Variables and maps determine the width of the grid container and its internal horizontal indents, the number of columns and the horizontal and vertical distance between them, control points for media queries, as well as parts of the library that will be included in the generated css file. They are used to generate the specified grid classes, as well as for the mixins used in the examples above. 
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Mixins</h4>
         <div class="text col-12">The directory <span class = 'inline-snippet'> grid/mixins/ </span> contains mixins that are used with mesh variables to generate css. All generated library classes use the same mixins.
-        </div>
-        <h3 class="title col-12">Sass source files</h3>
+        </div><a id=""></a>
+        <h3 class="title col-12">Sass source files</h3><a id=""></a>
         <h4 class="subtitle col-12">Grid</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/grid.scss</span> contains all the variables and grid settings that you can override:
         </div>
@@ -1464,7 +1464,7 @@ $grid-breakpoints: (
             <li class="class-list__item"><span class = 'inline-snippet'>grid-breakpoints</span> - grid breakpoints map. By default, eight control points are available. The map is used by system mixins, as well as parts of the <span class='inline-snippet'> grid/partials</span>, which are responsible for generating responsive column and other classes. For example, based on the names of the map keys and their values in the collected final css-file of the library, classes and media queries for them will be generated, as shown below.</li>
             <li class="class-list__item"><span class = 'inline-snippet'>partials</span> - a list of library parts responsible for generating certain sections of html classes. To reduce the size of the final css file of the library, you can set this variable to false before importing main library file. This will prevent the generation of a large number of predefined classes.</li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Responsive classes based on the breakpoint map</h4>
         <div class="text col-12">Below are the grid classes generated on the basis of the <span class = 'inline-snippet'> $grid-breakpoints </span> breakpoint map and that work for a given viewport width. Class names are generated based on the map key names <span class = 'inline-snippet'> $grid-breakpoints </span>, the viewport width values in media queries for these classes are generated based on the values of the corresponding keys. If you want to assign your names for classes and your values for viewport widths, just override the <span class = 'inline-snippet'> $grid-breakpoints </span> variable before importing the main library file <span class ='inline-snippet'> grid.scss </span>. To see how the grid will be rebuilt at different viewport widths, just resize the browser window.
         </div>
@@ -1895,7 +1895,7 @@ $grid-breakpoints: (
               </div>
             </li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Parts</h3>
         <div class="text col-12">The <span class = 'inline-snippet'> partials </span> directory contains a list of library parts responsible for generating class categories and media queries. In order to reduce the generated css file of the library, you can redefine the list, leaving only those elements whose names correspond to those parts of the library whose classes you will use. Below we will also say which parts are responsible for what. Or, if instead of arranging classes on the elements in the markup for building the grid, you prefer to use Sass and predefined mixins set the variable <span class = 'inline-snippet'> partials </span> to the value <span class = 'inline-script'> false </span> ( not <span class = 'inline-script'> null </span> ) or any other not null value. 
         </div>
@@ -1904,36 +1904,40 @@ $grid-breakpoints: (
           <pre><code class="scss">$partials: false;</code></pre>
         </div>
         <div class="text col-12">This will prevent the generation of a large number of ready-made classes, which will significantly reduce the size of the final css file of the library.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Alignment</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/alignment.scss </span> contains code that generates classes that are responsible for aligning columns within a row.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Direction of the arrangement of columns in a row</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/direction.scss </span> contains code that generates classes that are responsible for the direction of the main axis along which the columns within the row are aligned.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Column ordering</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/ordering.scss </span> contains code that generates classes that are responsible for the order of the columns inside the row.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Column offset</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/offset.scss </span> contains code that generates classes that are responsible for offsetting columns within a row.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Hide elements</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/hide.scss </span> contains code that generates classes that are responsible for hiding elements.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Display elements</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/visible.scss </span> contains code that generates classes that are responsible for displaying elements.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Zeroing the outer indentation of row and column elements</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/gutters.scss </span> contains code that generates classes that are responsible for nulling the outer indents of row and column elements.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Basic grid initialization</h4>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/base.scss </span> contains code that generates the base mesh classes.
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Compilation of source sass files</h3>
         <div class="text col-12">When using the flexbox-grid-pro library as sass files, it is strongly recommended that you use the minifiers<a href='https://github.com/Se7enSky/group-css-media-queries'> group-css-media-queries </a> and <a href='https://github.com/css/csso'> csso </a>. This will significantly reduce the amount of library css-file collected.
         </div>
       </main>
     </div>
+    <div class="sidebar-wrapper">
+      <button class="burger"><span class="inner"></span></button>
+    </div>
   </body><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script src="burger.js"></script>
 </html>
