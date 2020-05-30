@@ -1,0 +1,42 @@
+.burger {
+  width: 50px;
+  height: 35px;
+  background-color: #007fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  align-self: flex-end;
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 7px rgba(0 , 0, 0, .7);
+  }
+
+  .inner,
+  .inner::before,
+  .inner::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+  }
+
+  .inner {
+    top: 5px;
+    left: 5px;
+
+    &:before {
+      top: 10px;
+      left: 0;
+    }
+
+    &:after {
+      top: 20px;
+      left: 0;
+    }
+  }
+}

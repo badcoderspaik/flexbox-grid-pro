@@ -44,6 +44,11 @@ gulp.task('docs-sass', () => {
     .pipe(gulp.dest('docs'));
 });
 
+gulp.task('docs-js', () => {
+  return gulp.src('src/pug/components/burger/burger.js')
+    .pipe(gulp.dest('docs'));
+});
+
 gulp.task('browserSync', () => {
   browserSync.init({
     server: {

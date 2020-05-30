@@ -1,0 +1,19 @@
+.sidebar-wrapper {
+  display: flex;
+  padding-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 80vh;
+  outline: 1px solid blue;
+  transform: translateX(250px);
+
+  &_opened {
+    transform: translateX(0);
+  }
+
+  &_animated {
+    transition: transform .5s;
+  }
+}

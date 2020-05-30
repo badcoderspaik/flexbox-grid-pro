@@ -1,5 +1,7 @@
-mixin title(text)
+mixin title(text, href = '')
+  a(id= href)
   h3.title&attributes(attributes)= text
 
-mixin subtitle(text)
+mixin subtitle(text, href = '')
+  a(id= href)
   h4.subtitle&attributes(attributes)= text

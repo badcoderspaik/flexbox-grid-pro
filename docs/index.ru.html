@@ -12,6 +12,7 @@
     <link href="common.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet"><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script src="burger.js"></script>
     <title>Flexbox Grid Pro</title>
   </head>
   <body>
@@ -24,7 +25,7 @@
       </div>
     </header>
     <div class="container">
-      <main class="page-main row">
+      <main class="page-main row"><a id="intro"></a>
         <h3 class="title col-12">Введение</h3>
         <div class="text col-12">Flexbox Grid Pro - это богатая модульная сеточная система для создания адаптивных, отзывчивых макетов. Сетка доступна в двух вариантах - как набор предопределенных css-классов и как набор sass-миксинов. То есть вы можете либо в html-разметке проставить нужным элементам небходимые классы, либо же в вашем sass-коде в селекторах подключить необходимые миксины, как показано ниже. Оба варианта равнозначны и дают аналогичные результаты. Каким из них воспользоваться - лишь вопрос ваших предпочтений:
         </div>
@@ -140,7 +141,7 @@
 .col {
   @include col();
 }</code></pre>
-        </div>
+        </div><a id="different-width-cols"></a>
         <h3 class="title col-12">Колонки заданной ширины</h3>
         <div class="text col">По умолчанию сетка состоит из двенадцати колонок. Просто задайте элементу необходимый класс или подключите в селекторе нужный миксин:
         </div>
@@ -393,10 +394,10 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Выравнивание</h3>
         <div class="text col-12">Для горизонтального и вертикального выравнивания колонок воспользуйтесь необходимыми классами или миксинами.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Горизонтальное</h4>
         <div class="col-12">
           <div class="example example_colored row justify-content-start no-children-v-gutters">
@@ -486,7 +487,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Вертикальное</h4>
         <div class="col-12">
           <div class="example example_colored row example_fixed-size no-children-v-gutters align-items-start">
@@ -593,7 +594,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Направление расположения главной оси</h3>
         <div class="text col-12">Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:
         </div>
@@ -680,7 +681,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Порядок расположения колонок</h3>
         <div class="text col-12">Для указания порядка расположения столбцов в строке воспользуйтесь нужными классами или миксинами:
         </div>
@@ -744,7 +745,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Смещение колонок</h3>
         <div class="text col-12">Для смещения колонок используйте нужные классы или миксины:
         </div>
@@ -924,8 +925,8 @@
     }
   }
 }</code></pre>
-        </div>
-        <h3 class="title col-12">Скрытие и отображение элементов</h3>
+        </div><a id=""></a>
+        <h3 class="title col-12">Скрытие и отображение элементов</h3><a id=""></a>
         <h4 class="subtitle col-12">Скрытие</h4>
         <div class="text col-12">Для скрытия элементов используйте нужные классы или миксины. В примере ниже вторая и четвертая колонки будут скрыты при ширине вьюпорта 960px и меньше:
         </div>
@@ -968,7 +969,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Отображение</h4>
         <div class="text col-12">Для отображения элементов используйте нужные классы или миксины. В примере ниже вторая и четвертая колонки будут скрыты при ширине вьюпорта 960px и меньше, но снова отобразятся при ширине вьюпорта 768px:
         </div>
@@ -1012,7 +1013,7 @@
     }
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Обнуление внешних отступов у элементов строк и колонок</h3>
         <div class="text col-12">Чтобы обнулить внешние отступы у элементов строк и колонок, воспользуйтесь предназначенными для этого классами или миксинами. В примере ниже сброшены вертикальные внешние отступы у первых двух элементов строк:
         </div>
@@ -1297,7 +1298,7 @@
     @include col();
   }
 }</code></pre>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Колоночные классы</h3>
         <div class="text col-12">По умолчанию сетка состоит из двенадцати колонок и соответственно содержит двенадцать "колоночных" классов:
           <ul class="class-list">
@@ -1314,7 +1315,7 @@
             <li class="class-list__item"><span class="inline-snippet">col-11</span></li>
             <li class="class-list__item"><span class="inline-snippet">col-12</span></li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Контрольные точки ( breakpointns )</h3>
         <div class="text col-12">По умолчанию система использует восемь предопределенных контрольных точек в стиле desktop-first:
         </div>
@@ -1357,7 +1358,7 @@
               </tr>
             </tr>
           </table>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">&quot;Отзывчивые&quot; колоночные классы</h3>
         <div class="text col-12">Исходя из предопределенного числа используемых в сетке столбцов и названий контрольных точек ( по умолчанию ) система включает набор "отзывчивых" колоночных классов:
           <ul class="class-list">
@@ -1370,17 +1371,17 @@
             <li class="class-list__item"><span class="inline-snippet">col-phone-md-1 - col-phone-md-12</span></li>
             <li class="class-list__item"><span class="inline-snippet">col-phone-sm-1 - col-phone-sm-12</span></li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Кастомизация сетки</h3>
         <div class="text col-12">Наряду с готовым css-файлом библиотека доступна в виде исходных файлов Sass. При этом доступен как sass-, так и scss-синтаксис. При использовании Sass у вас есть возможность использовать набор готовых переменных и миксинов для кастомизации сетки и её гибкой настройки. Все предопределённые классы сетки используют те же переменные и миксины для предоставления целого набора готовых к использованию класоов для быстрого создания адаптивных макетов.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Переменные</h4>
         <div class="text col-12">Переменные и карты определяют ширину контейнера сетки и его внутренние горизонтальные отступы, количество столбцов и расстояние между ними по горизонтали и вертикали, контрольные точки для медиазапросов, а также части библиотеки, которые будут включены в сформированный css-файл. Они используются для генерации заданных классов сетки, а также для миксинов, использованных в примерах выше.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Миксины</h4>
         <div class="text col-12">В директории <span class='inline-snippet'>grid/mixins/</span> содержатся миксины, которые используются вместе с переменными сетки для генерации css. Все генерируемые классы библиотеки используют эти же миксины.
-        </div>
-        <h3 class="title col-12">Исходные файлы Sass</h3>
+        </div><a id=""></a>
+        <h3 class="title col-12">Исходные файлы Sass</h3><a id=""></a>
         <h4 class="subtitle col-12">Сетка</h4>
         <div class="text col-12">В файле <span class='inline-snippet'>grid/grid.scss</span> содержатся все переменные и настройки сетки, которые вы можете переопределить:
         </div>
@@ -1465,7 +1466,7 @@ $grid-breakpoints: (
             <li class="class-list__item"><span class='inline-snippet'>grid-breakpoints</span>  - карта контрольных точек ( breakpoints ) сетки. По умолчанию доступно восемь контрольных точек. Карта используется миксинами системы, а также частями библиотеки <span class='inline-snippet'>grid/partials</span>, отвечающими за генерацию "отзывчивых" колоночных и иных классов. Например, исходя из имен ключей карты и их значений в собранном конечном css-файле библиотеки будут сгенерированы классы и медиазапросы для них, как показано ниже.</li>
             <li class="class-list__item"><span class='inline-snippet'>partials</span>  - список частей библиотеки, отвечающих за генерацию определенных разделов html-классов. Чтобы уменьшить размер конечного css-файла библиотеки, вы можете присвоить этой переменной значение false перед импортом основного файла библиотеки. Это предотвратит генерацию большого количества предопределенных классов.</li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">&quot;Отзывчивые&quot; классы на основе карты контрольных точек</h4>
         <div class="text col-12">Ниже представлены классы сетки, сгенерированные на основе карты контрольных точек <span class='inline-snippet'>$grid-breakpoints</span> и срабатывающие при заданной ширине вьюпорта. Имена классов генерируются на основе имён ключей карты <span class='inline-snippet'>$grid-breakpoints</span>, значения же ширины вьюпорта в медиазапросах для этих классов генерируются на основе значений соответствующих ключей. Если вы хотите назначить свои имена для классов и свои значения для ширин вьюпорта, просто переопределите переменную <span class='inline-snippet'>$grid-breakpoints</span> перед импортом основного файла библиотеки <span class='inline-snippet'>grid.scss</span>. Чтобы увидеть, как будет перестраиваться сетка при различной ширине вьюпорта, просто поизменяйте размер окна браузера.
         </div>
@@ -1896,7 +1897,7 @@ $grid-breakpoints: (
               </div>
             </li>
           </ul>
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Части</h3>
         <div class="text col-12">Директория <span class='inline-snippet'>partials</span> содержит список частей библиотеки, отвечающих за генерацию категорий классов и медиазапросов. С целью уменьшения сформированного css-файла библиотеки вы можете переопределить список, оставив лишь те элементы, названия которых соответствуют тем частям библиотеки, классы которых вы будете использовать. Ниже ещё будет сказано, какие части за что отвечают. Либо же, если вместо расстановки классов на элементах в разметке для построения сетки вы предпочитаете использовать Sass и предопределенные миксины, вы можете присвоить переменной <span class='inline-snippet'>partials</span> значение <span class='inline-script'>false</span> ( не <span class='inline-script'>null</span> ) или любое другое "не null" значение.
         </div>
@@ -1905,35 +1906,38 @@ $grid-breakpoints: (
           <pre><code class="scss">$partials: false;</code></pre>
         </div>
         <div class="text col-12">Это предотвратит генерацию большого количества готовых классов, что позволит значительно уменьшить размер конечного css-файла библиотеки.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Выравнивание</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/alignment.scss</span> содержит код, генерирующий классы, отвечающие за выравнивание колонок внутри строки.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Направление расположения колонок в строке</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/direction.scss</span> содержит код, генерирующий классы, отвечающие за направление главной оси, вдоль которой выстраиваются столбцы внутри строки.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Упорядочивание колонок</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/ordering.scss</span> содержит код, генерирующий классы, отвечающие за порядок расположения колонок внутри строки.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Смещение колонок</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/offset.scss</span> содержит код, генерирующий классы, отвечающие за смещение колонок внутри строки.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Скрытие элементов</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/hide.scss</span> содержит код, генерирующий классы, отвечающие за скрытие элементов.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Отображение элементов</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/visible.scss</span> содержит код, генерирующий классы, отвечающие за отображение элементов.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Обнуление внешних отступов у элементов строк и колонок</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/partials/gutters.scss</span> содержит код, генерирующий классы, отвечающие за обнуление внешних отступов у элементов строк и колонок.
-        </div>
+        </div><a id=""></a>
         <h4 class="subtitle col-12">Базовая инициализация сетки</h4>
         <div class="text col-12">Файл <span class='inline-snippet'>grid/base.scss</span> содержит код, генерирующий базовые классы сетки.
-        </div>
+        </div><a id=""></a>
         <h3 class="title col-12">Компиляция исходных sass-файлов</h3>
         <div class="text col-12">При использовании библиотеки flexbox-grid-pro в виде sass-файлов, настоятельно рекомендуется использовать минификаторы <a href='https://github.com/Se7enSky/group-css-media-queries'>group-css-media-queries</a> и <a href='https://github.com/css/csso'>csso</a>. Это значительно сократит объём собранного css-файла библиотеки.
         </div>
       </main>
+    </div>
+    <div class="sidebar-wrapper">
+      <button class="burger"><span class="inner"></span></button>
     </div>
   </body>
 </html>
