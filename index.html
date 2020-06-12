@@ -23,8 +23,8 @@
       </div>
     </header>
     <div class="container">
-      <main class="page-main row"><a id="intro"></a>
-        <h3 class="title col-12">Introduction</h3>
+      <main class="page-main row">
+        <h3 class="title col-12">Introduction</h3><a id="intro"></a>
         <div class="text col-12">Flexbox Grid Pro is a rich modular grid system for creating adaptive, responsive layouts. The grid is available in two versions - as a set of predefined css classes and as a set of sass mixins. That is, you can either put necessary classes in the html markup to the necessary elements or connect the necessary mixins in your sass code in the selectors, as shown below. Both options are equivalent and give similar results. Which one to use is just a matter of your preference:
         </div>
         <div class="code-snippet col col-phone-landscape-12">
@@ -139,8 +139,8 @@
 .col {
   @include col();
 }</code></pre>
-        </div><a id="different-width-cols"></a>
-        <h3 class="title col-12">Columns of the specified width</h3>
+        </div>
+        <h3 class="title col-12">Columns of the specified width</h3><a id="different-width-cols"></a>
         <div class="text col">By default, the grid consists of twelve columns. Just set the element to the required class or connect the desired mixin in the selector:
         </div>
         <div class="col-12">
@@ -392,11 +392,11 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Alignment</h3>
+        </div>
+        <h3 class="title col-12">Alignment</h3><a id="alignment"></a>
         <div class="text col-12">For horizontal and vertical alignment of columns use the necessary classes or mixins.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Horizontal</h4>
+        </div>
+        <h4 class="subtitle col-12">Horizontal</h4><a id="alignment-horizontal"></a>
         <div class="col-12">
           <div class="example example_colored row justify-content-start no-children-v-gutters">
             <div class="example__col col-2">col-2</div>
@@ -485,8 +485,8 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Vertical</h4>
+        </div>
+        <h4 class="subtitle col-12">Vertical</h4><a id="alignment-vertical"></a>
         <div class="col-12">
           <div class="example example_colored row example_fixed-size no-children-v-gutters align-items-start">
             <div class="example__col col-4">col-4</div>
@@ -592,8 +592,8 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Направление расположения главной оси</h3>
+        </div>
+        <h3 class="title col-12">Направление расположения главной оси</h3><a id="axis-direction"></a>
         <div class="text col-12">Чтобы задать направление расположения столбцов в строке, воспользуйтесь необходимыми классами или миксинами:
         </div>
         <div class="col-12">
@@ -679,8 +679,8 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Column order</h3>
+        </div>
+        <h3 class="title col-12">Column order</h3><a id="column-order"></a>
         <div class="text col-12">To specify the order of the columns in the row, use the necessary classes or mixins:
         </div>
         <div class="col-12">
@@ -743,8 +743,8 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Column offset</h3>
+        </div>
+        <h3 class="title col-12">Column offset</h3><a id="column-offset"></a>
         <div class="text col-12">Use column classes or mixins to offset columns:
         </div>
         <div class="col-12">
@@ -923,9 +923,9 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Hide and show items</h3><a id=""></a>
-        <h4 class="subtitle col-12">Hide</h4>
+        </div>
+        <h3 class="title col-12">Hide and show items</h3><a id="hide-and-show"></a>
+        <h4 class="subtitle col-12">Hide</h4><a id="hide"></a>
         <div class="text col-12">To hide the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less:
         </div>
         <div class="col-12">
@@ -967,8 +967,8 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Display</h4>
+        </div>
+        <h4 class="subtitle col-12">Display</h4><a id="display"></a>
         <div class="text col-12">To display the elements, use the necessary classes or mixins. In the example below, the second and fourth columns will be hidden with a viewport width of 960px or less, but will be displayed again with a viewport width of 768px:
         </div>
         <div class="col-12">
@@ -1011,8 +1011,8 @@
     }
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Zeroing indentation of row and column elements</h3>
+        </div>
+        <h3 class="title col-12">Zeroing indentation of row and column elements</h3><a id="zeroing"></a>
         <div class="text col-12">To nullify the indentation of row and column elements, use the classes or mixins intended for this. In the example below, the vertical indentation of the first two elements of the lines is reset:
         </div>
         <div class="col-12">
@@ -1296,8 +1296,8 @@
     @include col();
   }
 }</code></pre>
-        </div><a id=""></a>
-        <h3 class="title col-12">Column classes</h3>
+        </div>
+        <h3 class="title col-12">Column classes</h3><a id="column-classes"></a>
         <div class="text col-12">By default, the grid consists of twelve columns and accordingly contains twelve "column" classes:
           <ul class="class-list">
             <li class="class-list__item"><span class="inline-snippet">col-1</span></li>
@@ -1313,8 +1313,8 @@
             <li class="class-list__item"><span class="inline-snippet">col-11</span></li>
             <li class="class-list__item"><span class="inline-snippet">col-12</span></li>
           </ul>
-        </div><a id=""></a>
-        <h3 class="title col-12">Breakpointns</h3>
+        </div>
+        <h3 class="title col-12">Breakpointns</h3><a id="breakpoints"></a>
         <div class="text col-12">By default, the system uses eight predefined desktop-first style control points:
         </div>
         <div class="col-12">
@@ -1356,8 +1356,8 @@
               </tr>
             </tr>
           </table>
-        </div><a id=""></a>
-        <h3 class="title col-12">Responsive column classes</h3>
+        </div>
+        <h3 class="title col-12">Responsive column classes</h3><a id="responsive-column-classes"></a>
         <div class="text col-12">Based on a predetermined number of columns and control point names used in the grid (by default), the system includes a set of responsive column classes:
           <ul class="class-list">
             <li class="class-list__item"><span class="inline-snippet">col-desktop-1 - col-desktop-12</span></li>
@@ -1369,18 +1369,18 @@
             <li class="class-list__item"><span class="inline-snippet">col-phone-md-1 - col-phone-md-12</span></li>
             <li class="class-list__item"><span class="inline-snippet">col-phone-sm-1 - col-phone-sm-12</span></li>
           </ul>
-        </div><a id=""></a>
-        <h3 class="title col-12">Customizing the grid</h3>
+        </div>
+        <h3 class="title col-12">Customizing the grid</h3><a id="grid-customization"></a>
         <div class="text col-12">Along with the finished css file, the library is available as Sass source files. Both sass and scss syntax are available. When using Sass, you can use a set of ready-made variables and mixins to customize the grid and its flexible settings. All predefined grid classes use the same variables and mixins to provide a whole set of ready-to-use classes for quickly creating adaptive layouts. 
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Variables</h4>
+        </div>
+        <h4 class="subtitle col-12">Variables</h4><a id="grid-customization-vars"></a>
         <div class="text col-12">Variables and maps determine the width of the grid container and its internal horizontal indents, the number of columns and the horizontal and vertical distance between them, control points for media queries, as well as parts of the library that will be included in the generated css file. They are used to generate the specified grid classes, as well as for the mixins used in the examples above. 
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Mixins</h4>
+        </div>
+        <h4 class="subtitle col-12">Mixins</h4><a id="grid-customization-mixins"></a>
         <div class="text col-12">The directory <span class = 'inline-snippet'> grid/mixins/ </span> contains mixins that are used with mesh variables to generate css. All generated library classes use the same mixins.
-        </div><a id=""></a>
-        <h3 class="title col-12">Sass source files</h3><a id=""></a>
-        <h4 class="subtitle col-12">Grid</h4>
+        </div>
+        <h3 class="title col-12">Sass source files</h3><a id="sass-source-files"></a>
+        <h4 class="subtitle col-12">Grid</h4><a id="sass-source-files-grid"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/grid.scss</span> contains all the variables and grid settings that you can override:
         </div>
         <div class="code-snippet col">
@@ -1464,8 +1464,8 @@ $grid-breakpoints: (
             <li class="class-list__item"><span class = 'inline-snippet'>grid-breakpoints</span> - grid breakpoints map. By default, eight control points are available. The map is used by system mixins, as well as parts of the <span class='inline-snippet'> grid/partials</span>, which are responsible for generating responsive column and other classes. For example, based on the names of the map keys and their values in the collected final css-file of the library, classes and media queries for them will be generated, as shown below.</li>
             <li class="class-list__item"><span class = 'inline-snippet'>partials</span> - a list of library parts responsible for generating certain sections of html classes. To reduce the size of the final css file of the library, you can set this variable to false before importing main library file. This will prevent the generation of a large number of predefined classes.</li>
           </ul>
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Responsive classes based on the breakpoint map</h4>
+        </div>
+        <h4 class="subtitle col-12">Responsive classes based on the breakpoint map</h4><a id="sass-source-files-responsive-classes"></a>
         <div class="text col-12">Below are the grid classes generated on the basis of the <span class = 'inline-snippet'> $grid-breakpoints </span> breakpoint map and that work for a given viewport width. Class names are generated based on the map key names <span class = 'inline-snippet'> $grid-breakpoints </span>, the viewport width values in media queries for these classes are generated based on the values of the corresponding keys. If you want to assign your names for classes and your values for viewport widths, just override the <span class = 'inline-snippet'> $grid-breakpoints </span> variable before importing the main library file <span class ='inline-snippet'> grid.scss </span>. To see how the grid will be rebuilt at different viewport widths, just resize the browser window.
         </div>
         <div class="text col-12">
@@ -1895,8 +1895,8 @@ $grid-breakpoints: (
               </div>
             </li>
           </ul>
-        </div><a id=""></a>
-        <h3 class="title col-12">Parts</h3>
+        </div>
+        <h3 class="title col-12">Parts</h3><a id="partials"></a>
         <div class="text col-12">The <span class = 'inline-snippet'> partials </span> directory contains a list of library parts responsible for generating class categories and media queries. In order to reduce the generated css file of the library, you can redefine the list, leaving only those elements whose names correspond to those parts of the library whose classes you will use. Below we will also say which parts are responsible for what. Or, if instead of arranging classes on the elements in the markup for building the grid, you prefer to use Sass and predefined mixins set the variable <span class = 'inline-snippet'> partials </span> to the value <span class = 'inline-script'> false </span> ( not <span class = 'inline-script'> null </span> ) or any other not null value. 
         </div>
         <div class="code-snippet col">
@@ -1904,38 +1904,831 @@ $grid-breakpoints: (
           <pre><code class="scss">$partials: false;</code></pre>
         </div>
         <div class="text col-12">This will prevent the generation of a large number of ready-made classes, which will significantly reduce the size of the final css file of the library.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Alignment</h4>
+        </div>
+        <h4 class="subtitle col-12">Alignment</h4><a id="partials-alignment"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/alignment.scss </span> contains code that generates classes that are responsible for aligning columns within a row.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Direction of the arrangement of columns in a row</h4>
+        </div>
+        <h4 class="subtitle col-12">Direction of the arrangement of columns in a row</h4><a id="partials-direction"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/direction.scss </span> contains code that generates classes that are responsible for the direction of the main axis along which the columns within the row are aligned.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Column ordering</h4>
+        </div>
+        <h4 class="subtitle col-12">Column ordering</h4><a id="partials-order"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/ordering.scss </span> contains code that generates classes that are responsible for the order of the columns inside the row.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Column offset</h4>
+        </div>
+        <h4 class="subtitle col-12">Column offset</h4><a id="partials-offset"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/offset.scss </span> contains code that generates classes that are responsible for offsetting columns within a row.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Hide elements</h4>
+        </div>
+        <h4 class="subtitle col-12">Hide elements</h4><a id="partials-hide"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/hide.scss </span> contains code that generates classes that are responsible for hiding elements.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Display elements</h4>
+        </div>
+        <h4 class="subtitle col-12">Display elements</h4><a id="partials-display"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/visible.scss </span> contains code that generates classes that are responsible for displaying elements.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Zeroing the outer indentation of row and column elements</h4>
+        </div>
+        <h4 class="subtitle col-12">Zeroing the outer indentation of row and column elements</h4><a id="partials-margins-reset"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/partials/gutters.scss </span> contains code that generates classes that are responsible for nulling the outer indents of row and column elements.
-        </div><a id=""></a>
-        <h4 class="subtitle col-12">Basic grid initialization</h4>
+        </div>
+        <h4 class="subtitle col-12">Basic grid initialization</h4><a id="grid-basic-init"></a>
         <div class="text col-12">The file <span class = 'inline-snippet'> grid/base.scss </span> contains code that generates the base mesh classes.
-        </div><a id=""></a>
-        <h3 class="title col-12">Compilation of source sass files</h3>
+        </div>
+        <h3 class="title col-12">Compilation of source sass files</h3><a id="compiling-sass-files"></a>
         <div class="text col-12">When using the flexbox-grid-pro library as sass files, it is strongly recommended that you use the minifiers<a href='https://github.com/Se7enSky/group-css-media-queries'> group-css-media-queries </a> and <a href='https://github.com/css/csso'> csso </a>. This will significantly reduce the amount of library css-file collected.
+        </div>
+        <h3 class="title col-12">Reference table for classes and mixins</h3><a id="reference-table"></a>
+        <h4 class="subtitle col-12">Alignment</h4><a id="ref-table-alignment"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>justify-content-start,</div>
+                  <div>justify-content-center,</div>
+                  <div>justify-content-end,</div>
+                  <div>justify-content-space-between,</div>
+                  <div>justify-content-space-around</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">justify-content( $align, $breakpoint )</div>
+                  <div class="class-table__mixin-description">Aligns the columns in a row according to the <span class = 'inline-snippet'> $align </span> parameter, which must take one of the following values: <span class = 'inline-snippet'> flex-start </span>, <span class='inline-snippet'>flex-end</span>, <span class = 'inline-snippet'> center </span>, <span class = 'inline-snippet'> space-between </span> , <span class = 'inline-snippet'> space-around </span>. Applies to row elements (<span class = 'inline-snippet'> row </span>) of the grid. If the argument <span class = 'inline-snippet'> $breakpoint </span> is passed, alignment will work in the media query according to the value of this argument. The argument value must be one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span>.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>align</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>flex-start,</div>
+                            <div>center,</div>
+                            <div>flex-end,</div>
+                            <div>space-between,</div>
+                            <div>space-around,</div>
+                          </td>
+                          <td class="class-table__default">flex-start</td>
+                          <td>Specifies the direction in which the columns in the row are laid out.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, the alignment will work in the media query according to this value. The argument value must be one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span> .</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Align the columns in the row according to the properties of the flex container: flex-start, center, flex-end, space-between, space-around. Applies to a line item.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>align-items-start,</div>
+                  <div>align-items-center,</div>
+                  <div>align-items-end,</div>
+                  <div>align-items-stretch,</div>
+                  <div>align-items-baseline</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">align-items( $align, $breakpoint )</div>
+                  <div class="class-table__mixin-description">Aligns the columns in a row according to the <span class = 'inline-snippet'> $align </span> parameter, which must take one of the following values: <span class = 'inline-snippet'> flex-start </span>, <span class = 'inline-snippet'> flex-end </span>, <span class = 'inline-snippet'> center </span>, <span class = 'inline-snippet'> stretch </span>, <span class = 'inline-snippet'> baseline </span>. Applies to row elements (<span class = 'inline-snippet'> row </span>) of the grid. If the argument <span class = 'inline-snippet'> $breakpoint </span> is passed, alignment will work in the media query according to the value of this argument. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>align</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>flex-start,</div>
+                            <div>center,</div>
+                            <div>flex-end,</div>
+                            <div>stretch,</div>
+                            <div>baseline</div>
+                          </td>
+                          <td class="class-table__default">flex-start</td>
+                          <td>Specifies how columns are aligned.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, the alignment will work in the media query according to this value. The argument value must be one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Align the columns in a row according to the properties of the flex container: flex-start, center, flex-end, stretch, baseline. Applies to a line item.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>align-self-start,</div>
+                  <div>align-self-center,</div>
+                  <div>align-self-end,</div>
+                  <div>align-self-stretch,</div>
+                  <div>align-self-baseline</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">align-self( $align, $breakpoint )</div>
+                  <div class="class-table__mixin-description">Aligns a single column in a row according to the <span class = 'inline-snippet'> $align </span> parameter, which must take one of the following values: <span class = 'inline-snippet'> flex-start </span> , <span class = 'inline-snippet'> flex-end </span>, <span class = 'inline-snippet'> center </span>, <span class = 'inline-snippet'> stretch </span> , <span class = 'inline-snippet'> baseline </span>. Applies to column elements (<span class = 'inline-snippet'> col </span>) of the grid. If the argument <span class = 'inline-snippet'> $breakpoint </span> is passed, alignment will work in the media query according to the value of this argument. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>align</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>flex-start,</div>
+                            <div>center,</div>
+                            <div>flex-end,</div>
+                            <div>stretch,</div>
+                            <div>baseline,</div>
+                          </td>
+                          <td class="class-table__default">flex-start</td>
+                          <td>Specifies how to align a single column in a row.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, the alignment will work in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Align a single column in a row according to the properties of the flex container: flex-start, center, flex-end, stretch, baseline. Apply to a column element.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="subtitle col-12">The direction of the main axis</h4><a id="ref-table-direction"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>direction-row,</div>
+                  <div>direction-row-reverse,</div>
+                  <div>direction-column,</div>
+                  <div>direction-column-reverse</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">direction ($direction, $breakpoint)</div>
+                  <div class="class-table__mixin-description">Specifies the direction of the main axis along which the columns in the row are aligned. One of the following values ​​should be passed as an argument to the first parameter <span class='inline-snippet'>$direction</span>: <span class='inline-snippet'>row</span>, <span class='inline-snippet'>row-reverse</span>, <span class='inline-snippet'>column</span>, <span class='inline-snippet'>column-reverse</span>. If the second argument is passed the value corresponding to one of the key names of the global object <span class='inline-snippet'>$grid-breakpoints</span>, the rule will be applied in the media query. </div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>direction</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>row,</div>
+                            <div>row-reverse,</div>
+                            <div>column,</div>
+                            <div>column-reverse</div>
+                          </td>
+                          <td class="class-table__default">row</td>
+                          <td>Specifies the direction of the main axis along which the columns in the row line up.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone -sm </div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, setting the direction of the main axis will work in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'>$grid-breakpoints</span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Set the direction of the main axis along which the columns in the row are aligned, according to the properties of the flex container: row, row-reverse, column, column-reverse. Applied to the row element <span class = 'inline-snippet' > row </span>. </td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="subtitle col-12">Column offset</h4><a id="ref-table-offset"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>offset-left-1 - offset-left-12,</div>
+                  <div>offset-right-1 - offset-right-12,</div>
+                  <div>offset-left-auto,</div>
+                  <div>offset-right-auto</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">offset ( $direction, $offset, $breakpoint )</div>
+                  <div class="class-table__mixin-description">Shifts a column in a row by <span class = 'inline-snippet'> $offset </span> - an integer number of columns, to the right - <span class = 'inline-snippet'> $direction </span>: right or left - <span class = 'inline-snippet'> $direction </span>: left. If auto is used as the second argument, the column is shifted to free space in one direction or another. If the argument value is <span class = 'inline-snippet'> $breakpoint </span> corresponds to one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>, the rules are applied in the corresponding media query. </div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>direction</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>left,</div>
+                            <div>right</div>
+                          </td>
+                          <td class="class-table__default">right</td>
+                          <td>Depends on this parameter in which direction the columns will shift - to the right or left.</td>
+                        </tr>
+                        <tr>
+                          <td>offset</td>
+                          <td>Number | String</td>
+                          <td class="class-table__available">
+                            <div>integer number of columns,</div>
+                            <div>auto</div>
+                          </td>
+                          <td class="class-table__default">auto</td>
+                          <td>The number of columns by which the column will be shifted. If the value <span class = 'inline-snippet'> auto </span> is passed, the column will shift left/right (depends on the second parameter <span class = 'inline- snippet '> direction </span>) to all available free space. </td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, the column call will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </ span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Shift the columns in the row by a certain number of columns to the right or left.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="subtitle col-12">Column layout</h4><a id="ref-table-order"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>order-0 - order-12,</div>
+                  <div>order-first,</div>
+                  <div>order-last,</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">order ($order,$ breakpoint)</div>
+                  <div class="class-table__mixin-description">Sorts the columns in a row according to the parameter <span class = 'inline-snippet'> $order </span> - an integer that determines the order of columns - the smaller the number, the closer the column will be to the beginning of the line. If when the mixin is called, it will be given the second argument <span class = 'inline-snippet'> $breakpoint </span>, and its value will correspond to one of the key names of the global object <span class = 'inline-snippet'> $grid -breakpoints </span>, then the sequencing rule will only work in the corresponding media request. Applies to row element <span class = 'inline-snippet'>row</span></div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>order</td>
+                          <td>Number | String</td>
+                          <td class="class-table__available">
+                            <div>0 is the total number of columns,</div>
+                            <div>first,</div>
+                            <div>last</div>
+                          </td>
+                          <td class="class-table__default">0</td>
+                          <td>An integer or line that defines the visual position of the column in the grid line. The smaller the number, the closer the column will be to the beginning of the line.</td>
+                        </tr>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, the column call will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </ span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Set the order of the visual arrangement of the columns in the row. Applies to row element <span class = 'inline-snippet'>row</span></td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="subtitle col-12">Reset margins</h4><a id="ref-table-reset"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-gutters ( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeros the outer margins of the element. Applies to any grid element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>$breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero out all indentation of the element. Apply to both the line element and the grid element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-h-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-h-gutters ( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeroes out the horizontal indents of the element. Applies to both the row element and the column element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero out the horizontal horizontal padding of the element. Applies to both the row element and the column element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-v-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-v-gutters ( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeros the outer vertical indents of the element. Applies to both the row element and the column element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer vertical padding of the element. Applies to both the row element and the column element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zero out the indentation of the column elements in the row. Applies to the row element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer margins of the column elements in the row. Apply to the row element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-h-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-h-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zeroes the outer horizontal indentation of the column elements in the row. Applies to the row element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer horizontal indentation of the column elements in the row. Applies to the row element.</td>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>no-children-v-gutters</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">no-children-v-gutters( $breakpoint )</div>
+                  <div class="class-table__mixin-description">Zero out the outer vertical indentation of the column elements in the row. Applies to the row element.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, resetting the indentation for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Zero the outer vertical indentation of the column elements in the row. Applies to the row element.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="subtitle col-12">Hide items</h4><a id="ref-table-hide"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>hide</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">hide ($ breakpoint)</div>
+                  <div class="class-table__mixin-description">Hides the element by setting its display property to none. If the value of the argument <span class = 'inline-snippet'>$breakpoint</span> matches one of the key names of the global object <span class = 'inline-snippet' > $grid-breakpoints </span>, the rule will be applied in the corresponding media request. Applies to any grid item.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>breakpoint</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>desktop,</div>
+                            <div>laptop,</div>
+                            <div>laptop-md,</div>
+                            <div>tablet-landscape,</div>
+                            <div>phone-landscape,</div>
+                            <div>phone,</div>
+                            <div>phone-md,</div>
+                            <div>phone-sm</div>
+                          </td>
+                          <td class="class-table__default">null</td>
+                          <td>Optional parameter. If a value is passed for it, hiding for the element will trigger in the media query according to this value. The argument value must be one of the key names of the global object <span class = 'inline-snippet'> $grid-breakpoints </span>. </td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Hides the element by setting its display property to none. Applies to any grid item.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="subtitle col-12">Show hidden items</h4><a id="ref-table-display"></a>
+        <div class="class-table-wrapper col-12">
+          <table class="class-table">
+            <tbody>
+              <tr>
+                <th>Class</th>
+                <th>Corresponding Mixin</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="class-table__name">
+                  <div>show</div>
+                </td>
+                <td>
+                  <div class="class-table__mixin-name">show ($display, $breakpoint)</div>
+                  <div class="class-table__mixin-description">Displays hidden elements by setting its display property to any value available for this property other than none. Applies to any element of the grid.</div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Available Values</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                        <tr>
+                          <td>display</td>
+                          <td>String</td>
+                          <td class="class-table__available">
+                            <div>Any value available for the css property <span class = 'inline-snippet'> display </span>, except for <span class = 'inline-snippet'> none </span>.</div>
+                          </td>
+                          <td class="class-table__default">initial</td>
+                          <td>Sets the display property of the element to the specified value.</td>
+                        </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <td class="class-table__description">Displays hidden elements by setting its display property to any value available for this property other than none. Applies to any grid element.</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>
     <div class="sidebar-wrapper">
       <button class="burger"><span class="inner"></span></button>
+      <!--include nav.data.pug-->
+      <nav class="main-nav">
+        <ul class="main-nav__list main-nav__list_level-1">
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#intro">Introduction</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#different-width-cols">Columns of the specified width</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1 main-nav__item_has-child"><a class="main-nav__link main-nav__link_level-1" href="#alignment">Alignment</a>
+        <ul class="main-nav__list main-nav__list_level-2">
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#alignment-horizontal">Horizontal</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#alignment-vertical">Vertical</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#axis-direction">The direction of the main axis</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#column-order">Column order</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#column-offset">Column offset</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1 main-nav__item_has-child"><a class="main-nav__link main-nav__link_level-1" href="#hide-and-show">Hide and show items</a>
+        <ul class="main-nav__list main-nav__list_level-2">
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#hide">Hide</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#display">Display</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#zeroing">Zeroing indentation of row and column elements</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#column-classes">Column classes</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#breakpoints">Breakpoints</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1"><a class="main-nav__link main-nav__link_level-1" href="#responsive-column-classes">Responsive column classes</a>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1 main-nav__item_has-child"><a class="main-nav__link main-nav__link_level-1" href="#grid-customization">Customizing the grid</a>
+        <ul class="main-nav__list main-nav__list_level-2">
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#grid-customization-vars">Variables</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#grid-customization-mixins">Mixins</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1 main-nav__item_has-child"><a class="main-nav__link main-nav__link_level-1" href="#sass-source-files">Sass source files</a>
+        <ul class="main-nav__list main-nav__list_level-2">
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2">Grid</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#sass-source-files-responsive-classes">Responsive breakpoint map based classes</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2 main-nav__item_has-child"><a class="main-nav__link main-nav__link_level-2" href="#partials">Parts</a>
+            <ul class="main-nav__list main-nav__list_level-3">
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-alignment">Alignment</a>
+              </li>
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-direction">The direction of the columns in the row</a>
+              </li>
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-order">Column ordering</a>
+              </li>
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-offset">Column offset</a>
+              </li>
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-hide">Hide elements</a>
+              </li>
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-display">Display elements</a>
+              </li>
+              <li class="main-nav__item main-nav__item_level-3"><a class="main-nav__link main-nav__link_level-3" href="#partials-margins-reset">Zeroing indentation of row and column elements</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#grid-basic-init">Basic grid initialization</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#compiling-sass-files">Compiling source sass files</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item main-nav__item_level-1 main-nav__item_has-child"><a class="main-nav__link main-nav__link_level-1" href="#reference-table">Reference table for classes and mixins</a>
+        <ul class="main-nav__list main-nav__list_level-2">
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-alignment">Alignment</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-direction">Direction of the location of the main axis</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-offset">Column offset</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-order">Column arrangement</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-reset">Reset indentation</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-hide">Hide elements</a>
+          </li>
+          <li class="main-nav__item main-nav__item_level-2"><a class="main-nav__link main-nav__link_level-2" href="#ref-table-display">Show hidden elements</a>
+          </li>
+        </ul>
+      </li>
+        </ul>
+      </nav>
     </div>
   </body><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
